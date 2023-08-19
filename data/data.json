@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "label": ["About", "Projects", "Contact"],
+    "link": ["#about", "#projects", "#contact"]
+  },
+
+  "home-description": ["Hi !", "I am Edi ,", "Web Developer"],
+
+  "about-description": [
+    "My name is Bălan Eduard I am 26 yo and I consider myself a person who has a great passion and interest when it comes to the area of developing websites, platforms and web apps for the vast world of the Internet.",
+    
+    "In the last two years I've gained experience in the frontend development by studying and practicing knowledge from platforms specialized in the field of web development such as W3Schools, Mozilla Developers, StackOverflow and others, but also from tutorials of advanced developers on Youtube. I also participated at a web development course by <a class='about-description-links' href='https://teachbit.ro' target='_blank'>Teachbit</a>.",
+
+    "As a person I am perseverant, flexible, open minded, always eager to learn new things and give my best in every project that I am involved.",
+
+    "Here are the web development technologies that I've been worked with: <span style='color:var(--green-300);'>HTML, CSS, Bootstrap, JavaScript, JSON, AJAX, Fetch, API</span>"
+  ],
+
+  "projects-elements": {
+    "id": ["project-one", "project-two", "project-three", "project-four"],
+    "link": ["/", "https://alice-professional-kineto.eu", "/", "/"],
+    "poster": ["project-banner-one.png", "project-banner-one.png", "unavailable.png", "unavailable.png"],
+    "src": ["project-one.mp4", "project-one.mp4", "", ""],
+    
+    "tech": {
+      "link": ["fa-html5", "fa-css3-alt", "fa-js"],
+      "title": ["HTML", "CSS", "JavaScript"]
+    },
+    
+    "title": ["Weather App", "Alice Kineto", "No title", "No title"]
+  },
+
+  "contact-links": {
+    "icon": [
+      "fa-solid fa-square-phone", "fa-brands fa-square-facebook", "fa-solid fa-earth-americas",
+  
+      "fa-brands fa-square-github", "fa-solid fa-envelope", "fa-brands fa-linkedin"
+    ],
+
+    "label": ["Call me", "Facebook", "Find me", "Github", "Text me", "LinkedIn"],
+    
+    "link": [
+      "tel:+40754595970", "https://www.facebook.com/edibalan123",
+      
+      "https://goo.gl/maps/aSY3U2METJoanY8z6", "https://github.com/EDI-B",
+      
+      "mailto:edibalan97@gmail.com", "https://www.linkedin.com/in/edi-b%C4%83lan-a74b2b218/"
+    ]
+  }
+}
