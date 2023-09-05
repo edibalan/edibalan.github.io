@@ -5,7 +5,7 @@ export default class AboutAnimation {
     this.background = QS("#about-background");
 
     this.aboutAnimationEnd = () => {
-      this.background.src = "./media/about-background-reverse.gif";
+      this.background.src = "./assets/about-background-reverse.gif";
       this.background.removeEventListener("mouseover", this.aboutAnimationEnd);
   
       setTimeout(() => this.background.classList.remove("about-animation"), 5750);
@@ -14,7 +14,7 @@ export default class AboutAnimation {
   
     this.aboutAnimationStart = () => {
       this.background.classList.add("about-animation");
-      this.background.src = "./media/about-background.gif";
+      this.background.src = "./assets/about-background.gif";
       this.background.removeEventListener("mouseover", this.aboutAnimationStart);
   
       setTimeout(() => this.background.addEventListener("mouseover", this.aboutAnimationEnd), 7000);

@@ -16,14 +16,11 @@ export default class SectionsHandler {
     this.home = {
       button: QS(".home-button"),
       container: QS(".home-container"),
-      header: QS(".header"),
       logoContainer: QS(".logo-container"),
-      navigation: QS(".navigation"),
-      navAside: QS(".navigation-aside")
+      navigation: QS(".navigation")
     };
 
     this.pageButtonsArr = QSAll(".page-button");
-    this.previousPosition = window.scrollY;
     this.projectsTitle = QS(".projects-title");
 
     this.desktopMode = (p1, p2, p3, display, v1, v2, v3) => {
@@ -42,7 +39,7 @@ export default class SectionsHandler {
       }, 1750);
     };
 
-    this.desktopModeHandler = () => {
+    this.desktopHandler = () => {
       const projectElementsPositionHandler = position => {
         QSAll("#project-two, #project-four").forEach(element => element.style.left = position);
         QSAll("#project-one, #project-three").forEach(element => element.style.right = position);
@@ -68,28 +65,9 @@ export default class SectionsHandler {
         setTimeout(() => projectElementsPositionHandler("100rem"), 500);
       }
       else if (window.scrollX > window.innerWidth) {
-        projectElementsPositionHandler(0);
         this.desktopMode("90rem", "90rem", "0", "block", "hidden", "visible", "hidden");
+        projectElementsPositionHandler(0);
       }
-    };
-  
-    this.mobileMode = () => {
-      let currentPosition = window.scrollY;
-
-      if (this.home.navigation.classList.contains("show-nav-menu")) {
-        this.home.navAside.classList.remove("low-opacity");
-        this.home.navigation.classList.remove("show-nav-menu");
-        this.home.navigation.classList.add("hide-nav-menu");
-      };
-
-      this.previousPosition > currentPosition
-        ? setTimeout(() => this.home.header.classList.remove("hide-home-header"), 400)
-        : this.home.header.classList.add("hide-home-header");
-        this.previousPosition = currentPosition;
-    
-      window.scrollY > window.innerHeight
-        ? this.home.button.classList.remove("hidden-element")
-        : this.home.button.classList.add("hidden-element");
     };
   }
 
@@ -97,20 +75,14 @@ export default class SectionsHandler {
     if (window.innerWidth >= 1024 &&
        (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary")) {
       
-      this.desktopModeHandler();
-      
-      window.addEventListener("scroll", this.desktopModeHandler);
+      window.addEventListener("scroll", this.desktopHandler);
+      this.desktopHandler();
     };
 
     if (window.innerWidth <= 1024 && screen.orientation.type === "portrait-primary") {
-      this.home.navigation.classList.add("hide-nav-menu");
-      this.home.navigation.classList.add("top-position");
-
       this.about.title.classList.remove("invisible");
       this.projectsTitle.classList.remove("invisible");
       this.contact.copyright.classList.remove("invisible");
-
-      window.addEventListener("scroll", this.mobileMode);
-    }
+    };
   }
 }

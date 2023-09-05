@@ -1,7 +1,7 @@
 "use strict";
 import { QSAll } from "../app.js";
 export default class ProjectsAnimation {
-  constructor() {
+  constructor(data) {
     this.projects = {
       banners: QSAll(".projects-banner"),
       descriptions: QSAll(".projects-element-description"),
@@ -10,27 +10,29 @@ export default class ProjectsAnimation {
     };
 
     this.animation = () => {
-      for (let i = 0; i < 2; i++) {
+      for (let i = 0; i < 3; i++) {
         this.projects.elements[i].addEventListener("mouseover", () => {
-          this.projects.banners[i].play();
-          this.projects.banners[i].setAttribute("controls", "true");
           this.projects.descriptions[i].classList.remove("invisible");
           this.projects.descriptions[i].classList.add("visible");
           this.projects.contents[i].classList.add("outline");
+
+          (screen.orientation.type !== "portrait-primary")
+            ? this.projects.banners[i].src = `./assets/${data["projects-elements"].src[i]}`
+            : this.projects.banners[i].src = `./assets/mobile_assets/${data["projects-elements"].src[i]}`;
         });
 
         this.projects.elements[i].addEventListener("mouseout", () => {
-          this.projects.banners[i].pause();
-          this.projects.banners[i].removeAttribute("controls");
           this.projects.descriptions[i].classList.remove("visible");
           this.projects.descriptions[i].classList.add("invisible");
           this.projects.contents[i].classList.remove("outline");
+
+          (screen.orientation.type !== "portrait-primary")
+            ? this.projects.banners[i].src = `./assets/${data["projects-elements"].poster[i]}`
+            : this.projects.banners[i].src = `./assets/mobile_assets/${data["projects-elements"].poster[i]}`;
         });
         
-        if (i > 2) break;
+        if (i > 3) break;
       }
     };
   }
-
-  initiate() { this.animation() }
 }

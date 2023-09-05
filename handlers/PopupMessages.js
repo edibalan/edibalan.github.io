@@ -31,7 +31,9 @@ export default class PopupMessages {
       event.target.parentElement.classList.add("hidden-element");
     }));
     
-    if ((window.innerHeight === screen.height) || screen.width >= 1680 || screen.width <= 768) {
+    if ((window.innerHeight === screen.height) || window.innerHeight >= 850 || window.innerWidth >= 1680 ||
+       (window.innerWidth <= 1024 && screen.orientation.type === "portrait-primary")) {
+      
       window.removeEventListener("keydown", this.hideFullscreenMessage);
       this.home.fullscreen.classList.add("hidden-element");
     };
