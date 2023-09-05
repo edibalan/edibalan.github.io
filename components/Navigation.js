@@ -21,7 +21,7 @@ export default class Navigation {
   render() {
     return `
       <div class="logo-container | container">
-        <a class="logo"><img alt="logo" src="./media/logo.jpeg"></a>
+        <a class="logo"><img alt="logo" src="./assets/logo.jpeg"></a>
         <div class="popup | container">
           <p class="popup-symbol">⯇</p>
           <p class="popup-text | fs-x-small fw-sm-bold">Psst! I am button too!</p>
@@ -32,8 +32,8 @@ export default class Navigation {
         <ol class="navigation-content | container" role="list" type="I">
           <button class="fw-light" id="close-navigation-button" type="button">✖</button>
           ${this.renderNavigationLinks()}
+          <a class="resume-button | fs-x-small fw-sm-bold" href="index.html" download>Resume</a>
         </ol>
-        <a class="resume-button | fs-x-small fw-sm-bold" href="index.html" download>Resume</a>
       </nav>
       <button class="fw-light" id="open-navigation-button" type="button">III</button>
     `;

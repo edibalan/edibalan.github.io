@@ -24,7 +24,7 @@ export default class About {
               ${this.renderAboutDescription()}
             </div>
             <img alt="about-section-background" class="about-background" id="about-background"
-              src="./media/about-background.jpeg" />
+              src="./assets/about-background.jpeg" />
           </div>
         </div>
 

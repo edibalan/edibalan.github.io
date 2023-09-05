@@ -16,6 +16,19 @@ export default class Projects {
       return container;
     }
 
+    this.renderProjectsBanners = index => {
+      if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {
+        return `
+          <img alt="projects-banner" class="projects-banner"
+            src="./assets/${data["projects-elements"].poster[index]}">
+        `;
+      } else {
+        return `<img alt="projects-banner" class="projects-banner"
+          src="./assets/mobile_assets/${data["projects-elements"].poster[index]}">
+        `;
+      };
+    };
+
     this.renderProjectsElements = () => {
       let container = "";
 
@@ -23,8 +36,7 @@ export default class Projects {
         container += `
           <div class="projects-element | container" id="${data["projects-elements"].id[i]}">
             <div class="projects-element-content">
-              <video class="projects-banner" poster="./media/${data["projects-elements"].poster[i]}"
-                preload="metadata" src="./media/${data["projects-elements"].src[i]}"></video>
+              ${this.renderProjectsBanners(i)}
             </div>
             <div class="projects-element-description | container invisible">
               <a class="project-link" href="${data["projects-elements"].link[i]}" target="_blank">
