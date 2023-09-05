@@ -32,7 +32,7 @@ export default class About {
           <i class="fa-solid fa-circle-chevron-right"></i>
         </a>
 
-        <a class="home-button | hidden-element fs-medium fw-sm-bold" href="#home">❮</a>
+        <a aria-label="home-button" class="home-button | hidden-element fs-medium fw-sm-bold" href="#home">❮</a>
       </section>
     `;
   }
