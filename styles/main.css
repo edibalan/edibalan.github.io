@@ -359,6 +359,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 .fw-bold {font-weight: var(--fw-bold);}
 .fw-bolder {font-weight: var(--fw-bolder);}
 
+.hidden-element {display: none;}
 .hide-home-header {top: -6rem;}
 .invisible {visibility: hidden;}
 .visible {visibility: visible;}
