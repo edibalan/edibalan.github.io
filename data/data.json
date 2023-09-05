@@ -9,9 +9,9 @@
   "about-description": [
     "My name is Bălan Eduard I am 26 yo and I consider myself a person who has a great passion and interest when it comes to the area of developing websites, platforms and web apps for the vast world of the Internet.",
     
-    "In the last two years I've gained experience in the frontend development by studying and practicing knowledge from platforms specialized in the field of web development such as W3Schools, Mozilla Developers, StackOverflow and others, but also from tutorials of advanced developers on Youtube. I also participated at a web development course by <a class='about-description-links' href='https://teachbit.ro' target='_blank'>Teachbit</a>.",
+    "In the last two years I've gained experience in the frontend development by studying and practicing knowledge from platforms specialized in the field of web development such as <span id='brands'>W3Schools, Mozilla developers, StackOverflow</span> and others, but also from tutorials of advanced developers on Youtube. I also participated at a web development course by <a class='about-description-links' href='https://teachbit.ro' target='_blank'>Teachbit</a>.",
 
-    "As a person I am perseverant, flexible, open minded, always eager to learn new things and give my best in every project that I am involved.",
+    "As a person I am perseverant, flexible, receptive, always eager to learn new things and give my best in every project that I am involved.",
 
     "Here are the web development technologies that I've been worked with: <span style='color:var(--green-300);'>HTML, CSS, Bootstrap, JavaScript, JSON, AJAX, Fetch, API</span>"
   ],
@@ -19,15 +19,15 @@
   "projects-elements": {
     "id": ["project-one", "project-two", "project-three", "project-four"],
     "link": ["/", "https://alice-professional-kineto.eu", "/", "/"],
-    "poster": ["project-banner-one.png", "project-banner-one.png", "unavailable.png", "unavailable.png"],
-    "src": ["project-one.mp4", "project-one.mp4", "", ""],
+    "poster": ["banner-one.png", "banner-two.png", "banner-three.png", "unavailable.png"],
+    "src": ["project-one.gif", "project-two.gif", "project-three.gif", ""],
     
     "tech": {
       "link": ["fa-html5", "fa-css3-alt", "fa-js"],
       "title": ["HTML", "CSS", "JavaScript"]
     },
     
-    "title": ["Weather App", "Alice Kineto", "No title", "No title"]
+    "title": ["Weather App", "Alice Kineto", "Template page", "No title"]
   },
 
   "contact-links": {
@@ -42,7 +42,7 @@
     "link": [
       "tel:+40754595970", "https://www.facebook.com/edibalan123",
       
-      "https://goo.gl/maps/aSY3U2METJoanY8z6", "https://github.com/EDI-B",
+      "https://goo.gl/maps/aSY3U2METJoanY8z6", "https://github.com/edibalan",
       
       "mailto:edibalan97@gmail.com", "https://www.linkedin.com/in/edi-b%C4%83lan-a74b2b218/"
     ]
