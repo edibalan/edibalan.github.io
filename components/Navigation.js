@@ -6,8 +6,8 @@ export default class Navigation {
 
       for(let i = 0; i < data["navigation"].label.length; i++) {
         container += `
-          <li class="fs-x-small fw-sm-bold" role="link">
-            <a class="navigation-link" href="${data["navigation"].link[i]}">
+          <li class="fs-x-small fw-sm-bold" role="listitem">
+            <a class="navigation-link" href="${data["navigation"].link[i]}" role="link">
               ${data["navigation"].label[i]}
             </a>
           </li>
