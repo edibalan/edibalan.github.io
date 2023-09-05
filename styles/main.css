@@ -29,7 +29,7 @@ body {
 a:not([class]) {text-decoration-skip-ink: auto;}
 
 /* Make images easier to work with */
-img, picture, svg, .about-background, a, button, .logo, .popup, .projects-element-tech {user-select: none;}
+img, picture, svg, .about-background, a, button, .popup, .projects-element-tech {user-select: none;}
 img, picture, svg, .about-background {
   cursor: none;
   display: block;
@@ -75,7 +75,7 @@ img, picture, svg, .about-background {
 :root::-webkit-scrollbar, .popup, #close-navigation-button, #open-navigation-button, .page-button,
   .hidden-element {display: none;}
 
-body, a, button,.logo,.popup,.page-button,.projects-element-tech,.contact-nav-menu-link {color: var(--grey-300);}
+body, a, button, .popup, .page-button, .projects-element-tech, .contact-nav-menu-link {color: var(--grey-300);}
 body, .header, .navigation {background-color: var(--blue-500);}
 body, .projects-element-content {overflow: hidden;}
 body, .projects-button {
@@ -85,7 +85,7 @@ body, .projects-button {
 }
 
 a, button, h1, h2, h3 {text-transform: uppercase;}
-a, button, .logo img, .popup, .page-button, .contact-nav-menu-link {cursor: pointer; text-decoration: none;}
+a, button, .popup, .logo img, .page-button, .contact-nav-menu-link {cursor: pointer; text-decoration: none;}
 a, button, .popup, .projects-element-content {transition-duration: 0.25s; transition-timing-function: linear;}
 a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-navigation-button,
   #open-navigation-button, .resume-button, .projects-button, .home-button, .about-title,
@@ -109,8 +109,11 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 
 .logo-container, .logo, .navigation, .home-container {transition-duration: 1.25s;}
 .logo-container {right: 10rem;}
+.logo, .resume-button {background-color: transparent;}
 .logo {
+  border: none;
   margin-right: 0.25rem;
+  outline: none;
   width: 2.75rem;
 }
 
@@ -129,7 +132,6 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 
 .navigation-content {column-gap: 4.25rem;}
 .resume-button {
-  background-color: transparent;
   border-radius: 100vmax;
   padding-block: 0.625rem;
   margin-left: -1.75rem;
