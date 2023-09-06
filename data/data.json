@@ -18,7 +18,7 @@
 
   "projects-elements": {
     "id": ["project-one", "project-two", "project-three", "project-four"],
-    "link": ["/", "https://alice-professional-kineto.eu", "/", "/"],
+    "link": ["https://edibalan.github.io/weather-app", "https://edibalan.github.io/alice-kineto", "https://edibalan.github.io/atlantis-studio", "/"],
     "poster": ["banner-one.png", "banner-two.png", "banner-three.png", "unavailable.png"],
     "src": ["project-one.gif", "project-two.gif", "project-three.gif", ""],
     
