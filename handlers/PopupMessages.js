@@ -16,10 +16,7 @@ export default class PopupMessages {
       };
     }
 
-    this.loadPopupMessages = () => {
-      this.home.section.removeEventListener("mouseover", this.loadPopupMessages);
-      setTimeout(() => this.home.popup.forEach(popup => popup.classList.add("display-flex")), 4000);
-    };
+    this.loadPopupMessages = () => setTimeout(() => this.home.popup.forEach(popup => popup.classList.add("display-flex")), 4000);
   }
 
   initiate() {
