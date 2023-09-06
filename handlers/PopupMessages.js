@@ -18,14 +18,14 @@ export default class PopupMessages {
 
     this.loadPopupMessages = () => {
       this.home.section.removeEventListener("mouseover", this.loadPopupMessages);
-      setTimeout(() => this.home.popup.forEach(popup => popup.classList.add("display-flex")), 3000);
+      setTimeout(() => this.home.popup.forEach(popup => popup.classList.add("display-flex")), 4000);
     };
   }
 
   initiate() {
     window.addEventListener("keydown", this.hideFullscreenMessage);
 
-    this.home.section.addEventListener("mouseover", this.loadPopupMessages);
+    this.loadPopupMessages();
     this.home.popup.forEach(popup => popup.addEventListener("click", event => {
       this.popupSound.play();
       event.target.parentElement.classList.add("hidden-element");
