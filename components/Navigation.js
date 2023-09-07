@@ -30,7 +30,7 @@ export default class Navigation {
       <nav class="navigation | container">
         <aside class="navigation-aside"></aside>
         <ol class="navigation-content | container" role="list" type="I">
-          <button class="fw-light" id="close-navigation-button" type="button">✖</button>
+          <button class="fw-light" id="close-navigation-button" type="button">✕</button>
           ${this.renderNavigationLinks()}
           <a class="resume-button | fs-x-small fw-sm-bold" download href="/" role="link">Resume</a>
         </ol>
