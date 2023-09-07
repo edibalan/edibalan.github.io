@@ -117,7 +117,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   width: 2.75rem;
 }
 
-.popup-symbol {margin-right: -0.375rem;}
+.popup-symbol {margin-right: -0.375rem; transform: rotateZ(90deg);}
 .popup-text {padding-block: 0.5rem;}
 .popup-text, .resume-button, .contact-nav-menu-link {padding-inline: 0.75rem;}
 .popup-text, .resume-button, .projects-button, .home-button, .contact-nav-menu-link {
