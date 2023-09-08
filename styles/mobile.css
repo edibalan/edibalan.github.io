@@ -1,5 +1,5 @@
 /* WIDTH <= 1024px */
-@media (max-width: 64em) and (orientation: portrait) {
+@media (max-width: 64em) {
   body, .main, .footer, .copyright-container {flex-direction: column;}
   body {display: flex; overflow-y: scroll; scroll-snap-type: none;}
 
@@ -43,7 +43,7 @@
 }
 
 /* WIDTH <= 884px */
-@media (max-width: 55.25em) and (orientation: portrait) {
+@media (max-width: 55.25em) {
   :root { --fs-x-large: 9.72851vw; /* 86px */ }
   .main, .home-container, .footer {padding-inline: 5.125rem;}
   .home-container,.about-description,.projects-element,.projects-element-content,.projects-banner {width: 100%;}
@@ -61,7 +61,7 @@
 }
 
 /* WIDTH <= 834px */
-@media (max-width: 52.125em) and (orientation: portrait) {
+@media (max-width: 52.125em) {
   .header {padding-inline: 1.75rem;}
   .logo {width: 2.5rem;}
   .navigation, #close-navigation-button {position: absolute;}
@@ -113,7 +113,7 @@
 }
 
 /* WIDTH <= 820px */
-@media (max-width: 51.25em) and (orientation: portrait) {
+@media (max-width: 51.25em) {
   .home-description {letter-spacing: -0.675vw;}
   .home-description h1:nth-of-type(2) {margin-block: 3.479rem;}
   .home-description h1:nth-of-type(3) {margin-bottom: 0.875rem;}
@@ -125,7 +125,7 @@
 }
 
 /* WIDTH <= 810px */
-@media (max-width: 50.625em) and (orientation: portrait) {
+@media (max-width: 50.625em) {
   .home-description h1:nth-of-type(2) {margin-block: 3.314rem;}
   .avatar-container {bottom: 9.875rem;}
 
@@ -135,7 +135,7 @@
 }
 
 /* WIDTH <= 800px */
-@media (max-width: 50em) and (orientation: portrait) {
+@media (max-width: 50em) {
   .navigation {grid-template-columns: 45% 55%;}
 
   .home-description {letter-spacing: -0.8vw;}
@@ -150,7 +150,7 @@
 }
 
 /* WIDTH <= 768px */
-@media (max-width: 48em) and (orientation: portrait) {
+@media (max-width: 48em) {
   .home-description {letter-spacing: -0.95vw;}
   .home-description h1:nth-of-type(2) {margin-block: 2.748rem;}
   .home-description h1:nth-of-type(3) {margin-bottom: 0.6875rem;}
@@ -169,7 +169,7 @@
 }
 
 /* WIDTH <= 720px */
-@media (max-width: 45em) and (orientation: portrait) {
+@media (max-width: 45em) {
   .navigation {grid-template-columns: 42.5% 57.5%;}
 
   .main, .home-container, .footer {padding-inline: 4.125rem;}
@@ -184,7 +184,7 @@
 }
 
 /* WIDTH <= 668px */
-@media (max-width: 41.75em) and (orientation: portrait) {
+@media (max-width: 41.75em) {
   .fs-medium {letter-spacing: 0.04rem;}
 
   .navigation-content {row-gap: 6.5rem;}
@@ -201,7 +201,7 @@
 }
 
 /* WIDTH <= 602px */
-@media (max-width: 37.625em) and (orientation: portrait) {
+@media (max-width: 37.625em) {
   :root { --fs-x-large: 12.45847vw; /* 75px */ }
 
   .navigation {grid-template-columns: 40% 60%;}
@@ -238,7 +238,7 @@
 }
 
 /* WIDTH <= 540px */
-@media (max-width: 33.75em) and (orientation: portrait) {
+@media (max-width: 33.75em) {
   .header {padding-block: 1.125rem; padding-inline: 1.375rem;}
   .navigation {grid-template-columns: 37.5% 62.5%;}
   .navigation-content {row-gap: 5rem;}
@@ -263,7 +263,7 @@
 }
 
 /* WIDTH <= 440px */
-@media (max-width: 27.5em) and (orientation: portrait) {
+@media (max-width: 27.5em) {
   :root { --fs-x-large: 12.95455vw; /* 57px */ }
   body, .projects-button {letter-spacing: 0.04rem;}
 
@@ -295,7 +295,7 @@
 }
 
 /* WIDTH <= 428px */
-@media (max-width: 26.75em) and (orientation: portrait) {
+@media (max-width: 26.75em) {
   .home-description h1:nth-of-type(2) {margin-block: 1.25rem;}
   .home-description h1:nth-of-type(3) {margin-bottom: 1.875rem;}
 
@@ -305,16 +305,16 @@
 }
 
 /* WIDTH <= 412px */
-@media (max-width: 25.75em) and (orientation: portrait) {.home-description {letter-spacing: -0.7vw;}}
+@media (max-width: 25.75em) {.home-description {letter-spacing: -0.7vw;}}
 
 /* WIDTH <= 393px */
-@media (max-width: 24.57em) and (orientation: portrait) {
+@media (max-width: 24.57em) {
   .home-description {letter-spacing: -0.8vw;}
   .about-description {letter-spacing: 0.025rem;}
 }
 
 /* WIDTH <= 360px */
-@media (max-width: 22.5em) and (orientation: portrait) {
+@media (max-width: 22.5em) {
   :root { --fs-large: 1.5rem; /* 24px */ }
   
   body {font-size: 0.875rem;  /* 14px */ }
@@ -330,7 +330,7 @@
 }
 
 /* WIDTH <= 320px */
-@media (max-width: 20em) and (orientation: portrait) {
+@media (max-width: 20em) {
   .header {padding: 0.75rem;}
   .navigation {grid-template-columns: 0% 100%;}
   .navigation-content {row-gap: 3.5rem;}
@@ -345,14 +345,14 @@
 }
 
 /* HEIGHT SETTINGS */
-@media (max-height: 40.625em) and (orientation: portrait) {
+@media (max-height: 40.625em) {
   .home-description {line-height: 4.5rem;}
   .home-description h1:nth-of-type(2) {margin-block: 0;}
   .home-description h1:nth-of-type(3) {margin-bottom: 0.75rem;}
   .avatar-container {margin-bottom: 0;}
 }
 
-@media (max-height: 33.5em) and (orientation: portrait) {.avatar-container {display: none;}}
+@media (max-height: 33.5em) {.avatar-container {display: none;}}
 
 /* PERMANENT UTILITIES */
 .blurred {filter: blur(0.5rem);}
