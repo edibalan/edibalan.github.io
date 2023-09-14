@@ -5,7 +5,7 @@ export default class StylesHandler {
     this.file = QS("#css-file");
 
     this.fileHandler = () => {
-      if (screen.orientation.type === "portrait-primary" && this.file.href === "") {
+      if (window.innerHeight >= window.innerWidth && this.file.href === "") {
         this.file.href = "./styles/mobile.css"
       };
     };
