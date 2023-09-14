@@ -22,7 +22,7 @@ export default class Home {
             <img class="avatar" src="./assets/avatar.jpeg" alt="avatar" />
           </div>
           <div class="popup | container" id="fullscreen-message">
-            <p class="popup-symbol">⯇</p>
+            <i class="popup-symbol | fa-solid fa-caret-up"></i>
             <p class="popup-text | fs-x-small fw-sm-bold">
               Hi! For a better experience on my platform, I recommend using full screen mode by pressing F11 on
               your keyboard.
