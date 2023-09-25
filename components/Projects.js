@@ -17,14 +17,15 @@ export default class Projects {
     }
 
     this.renderProjectsBanners = index => {
-      if (screen.orientation.type === "landscape-primary" || screen.orientation.type === "landscape-secondary") {
+      if (window.innerHeight > window.innerWidth || window.innerHeight >= 720) {
+        return `
+          <img alt="projects-banner" class="projects-banner"
+            src="./assets/mobile_assets/${data["projects-elements"].poster[index]}">
+        `;
+      } else {
         return `
           <img alt="projects-banner" class="projects-banner"
             src="./assets/${data["projects-elements"].poster[index]}">
-        `;
-      } else {
-        return `<img alt="projects-banner" class="projects-banner"
-          src="./assets/mobile_assets/${data["projects-elements"].poster[index]}">
         `;
       };
     };
