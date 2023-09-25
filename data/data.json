@@ -5,20 +5,22 @@
   },
 
   "home-description": ["Hi !", "I am Edi ,", "Web Developer"],
-
   "about-description": [
-    "My name is Bălan Eduard I am 26 yo and I consider myself a person who has a great passion and interest when it comes to the area of developing websites, platforms and web apps for the vast world of the Internet.",
-    
-    "In the last two years I've gained experience in the frontend development by studying and practicing knowledge from platforms specialized in the field of web development such as <span id='brands'>W3Schools, Mozilla developers, StackOverflow</span> and others, but also from tutorials of advanced developers on Youtube. I also participated at a web development course by <a class='about-description-links' href='https://teachbit.ro' target='_blank'>Teachbit</a>.",
-
-    "As a person I am perseverant, flexible, receptive, always eager to learn new things and give my best in every project that I am involved.",
-
-    "Here are the web development technologies that I've been worked with: <span style='color:var(--green-300);'>HTML, CSS, Bootstrap, JavaScript, JSON, AJAX, Fetch, API</span>"
+    "My name is Bălan Eduard I am 26 yo and I consider myself a person who has a infinite passion when it comes to the area of developing websites, platforms and web apps for the vast world of the Internet.",
+    "In the last two years I gained experience in frontend development by studying and practicing knowledge from platforms specialized web development <span class='brands'>(W3&shySchools, Mozilla developers, Stack&shyOverflow)</span>, but also from tutorials of advanced developers on You&shytube. I also enrolled to web development course of <a class='about-description-links' href='https://teachbit.ro' target='_blank'>Teachbit</a> platform in 2022.",
+    "As a person I am perseverant, flexible, receptive, always eager to le&shyarn new things and give my best in every project that I am involved.",
+    "Here is a list of technologies that I've been worked with: <span style='color:var(--green-300);'>HTML, CSS, Boots&shytrap, Java&shyScript, JSON, AJAX, Fetch, API</span>"
   ],
 
   "projects-elements": {
     "id": ["project-one", "project-two", "project-three", "project-four"],
-    "link": ["https://edibalan.github.io/weather-app", "https://edibalan.github.io/alice-kineto/index.html", "https://edibalan.github.io/atlantis-studio", "/"],
+    "link": [
+      "https://edibalan.github.io/weather-app",
+      "https://edibalan.github.io/alice-kineto",
+      "https://edibalan.github.io/atlantis-studio",
+      "/"
+    ],
+
     "poster": ["banner-one.png", "banner-two.png", "banner-three.png", "unavailable.png"],
     "src": ["project-one.gif", "project-two.gif", "project-three.gif", ""],
     
@@ -27,7 +29,7 @@
       "title": ["HTML", "CSS", "JavaScript"]
     },
     
-    "title": ["Weather App", "Alice Kineto", "Template page", "No title"]
+    "title": ["Weather App", "Alice Kineto", "Template page", "Unavailable"]
   },
 
   "contact-links": {
@@ -38,7 +40,6 @@
     ],
 
     "label": ["Call me", "Facebook", "Find me", "Github", "Text me", "LinkedIn"],
-    
     "link": [
       "tel:+40754595970", "https://www.facebook.com/edibalan123",
       
