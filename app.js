@@ -10,8 +10,7 @@ import ButtonsHandler from "./handlers/ButtonsHandler.js";
 import NavigationHandler from "./handlers/NavigationHandler.js";
 import PopupMessages from "./handlers/PopupMessages.js";
 import ProjectsAnimation from "./handlers/ProjectsAnimation.js";
-import SectionsHandler from "./handlers/SectionsHandler.js";
-import StylesHandler from "./handlers/StylesHandler.js";
+import ScrollHandler from "./handlers/ScrollHandler.js";
 import ThemesHandler from "./handlers/ThemesHandler.js";
 
 export const QS = elem => document.querySelector(elem), QSAll = elem => document.querySelectorAll(elem);
@@ -60,15 +59,13 @@ export default class App {
       new ButtonsHandler().initiate();
       new NavigationHandler().initiate();
       new PopupMessages().initiate();
-      new ProjectsAnimation(data).animation();
-      new SectionsHandler().initiate();
+      new ProjectsAnimation(data).initiate();
+      new ScrollHandler().initiate();
       new ThemesHandler().initiate();
     }, 2750);
 
     try {
       if (response.status === 200) {
-        new StylesHandler().initiate();
-
         this.header.setAttribute("class", "header | container");
         this.header.innerHTML = `
           ${this.renderAudioElements()}
