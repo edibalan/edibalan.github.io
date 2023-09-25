@@ -13,7 +13,7 @@ export default class About {
   render() {
     return `
       <section class="about-section | container" id="about">
-        <a class="page-button previous-button | fs-sm-large" href="#home">
+        <a class="page-button previous-button | fs-sm-large" id="home-link" href="#home">
           <i class="fa-solid fa-circle-chevron-left"></i>
         </a>
         
