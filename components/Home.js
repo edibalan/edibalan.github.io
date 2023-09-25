@@ -24,8 +24,7 @@ export default class Home {
           <div class="popup | container" id="fullscreen-message">
             <i class="popup-symbol | fa-solid fa-caret-up"></i>
             <p class="popup-text | fs-x-small fw-sm-bold">
-              Hi! For a better experience on my platform, I recommend using full screen mode by pressing F11 on
-              your keyboard.
+              Hi! For a better experience you can activate full screen mode by pressing F11 on your keyboard.
             </p>
           </div>
         </div>
