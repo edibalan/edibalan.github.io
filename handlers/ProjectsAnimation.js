@@ -9,30 +9,54 @@ export default class ProjectsAnimation {
       contents: QSAll(".projects-element-content")
     };
 
-    this.animation = () => {
+    this.animationHandler = (event, v1, v2, p1, p2) => {
       for (let i = 0; i < 3; i++) {
-        this.projects.elements[i].addEventListener("mouseover", () => {
-          this.projects.descriptions[i].classList.remove("invisible");
-          this.projects.descriptions[i].classList.add("visible");
-          this.projects.contents[i].classList.add("outline");
-
-          (screen.orientation.type !== "portrait-primary")
-            ? this.projects.banners[i].src = `./assets/${data["projects-elements"].src[i]}`
-            : this.projects.banners[i].src = `./assets/mobile_assets/${data["projects-elements"].src[i]}`;
-        });
-
-        this.projects.elements[i].addEventListener("mouseout", () => {
-          this.projects.descriptions[i].classList.remove("visible");
-          this.projects.descriptions[i].classList.add("invisible");
-          this.projects.contents[i].classList.remove("outline");
-
-          (screen.orientation.type !== "portrait-primary")
-            ? this.projects.banners[i].src = `./assets/${data["projects-elements"].poster[i]}`
-            : this.projects.banners[i].src = `./assets/mobile_assets/${data["projects-elements"].poster[i]}`;
+        this.projects.elements[i].addEventListener(event, () => {
+          this.projects.descriptions[i].classList.remove(v1);
+          this.projects.descriptions[i].classList.add(v2);
+          this.projects.contents[i].classList[p1]("outline");
+        
+          window.innerHeight > window.innerWidth || window.innerHeight >= 720
+            ? this.projects.banners[i].src = `./assets/mobile_assets/${data["projects-elements"][p2][i]}`
+            : this.projects.banners[i].src = `./assets/${data["projects-elements"][p2][i]}`;
         });
         
         if (i > 3) break;
+      };
+    };
+
+    this.bannerHandler = () => {
+      if (window.innerHeight >= 720) {
+        this.projects.banners.forEach((banner, index) => {
+          banner.src = `./assets/mobile_assets/${data["projects-elements"].src[index]}`
+        });
+      } else {
+        this.projects.banners.forEach((banner, index) => {
+          banner.src = `./assets/${data["projects-elements"].src[index]}`
+        });
       }
+    };
+
+    this.posterHandler = () => {
+      if (window.innerHeight >= 720) {
+        this.projects.banners.forEach((banner, index) => {
+          banner.src = `./assets/mobile_assets/${data["projects-elements"].poster[index]}`
+        });
+      } else {
+        this.projects.banners.forEach((banner, index) => {
+          banner.src = `./assets/${data["projects-elements"].poster[index]}`
+        });
+      }
+    };
+  }
+
+  initiate() {
+    this.animationHandler("mouseover", "invisible", "visible", "add", "src");
+    this.animationHandler("mouseout", "visible", "invisible", "remove", "poster");
+
+    if (window.innerWidth >= 1024) {
+      window.addEventListener("resize", this.bannerHandler);
+      window.addEventListener("resize", this.posterHandler);
     };
   }
 }
