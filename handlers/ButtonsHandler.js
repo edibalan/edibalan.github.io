@@ -1,6 +1,6 @@
 "use strict";
 import { QS, QSAll } from "../app.js";
-export default class DataHandler {
+export default class ButtonsHandler {
   constructor() {
     this.buttonsAndLinks = QSAll(
       ".navigation-link, .resume-button, .projects-button, .page-button, \
@@ -12,7 +12,7 @@ export default class DataHandler {
   }
 
   initiate() {
+    this.buttonsAndLinks.forEach(button => button.addEventListener("click", () => this.clickSound.play()));
     this.homeButton.addEventListener("click", () => this.homeButton.classList.add("hidden-element"));
-    this.buttonsAndLinks.forEach(element => element.addEventListener("click", () => this.clickSound.play()));
   }
 }
