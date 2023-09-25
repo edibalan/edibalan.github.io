@@ -7,7 +7,7 @@ export default class Contact {
       for(let i = 0; i < data["contact-links"].label.length; i++) {
         container += `
           <li>
-            <a class="contact-nav-menu-link | container" href="${data["contact-links"].link[i]}"
+            <a class="contact-nav-menu-link | container fs-x-small" href="${data["contact-links"].link[i]}"
               target="_blank">
                 <span class="contact-nav-menu-label | fw-bold">${data["contact-links"].label[i]}</span>
                 <i class="fs-large ${data["contact-links"].icon[i]}"></i>
@@ -27,8 +27,8 @@ export default class Contact {
       </a>
 
       <div class="contact-content | container">
-        <h1 class="contact-title | fs-large fw-sm-bold">Get in Touch</h1>
-        <p id="contact-title-underline"></p>
+        <h1 class="contact-title | fs-large fw-sm-bold invisible">Get in Touch</h1>
+        <p class="invisible" id="contact-title-underline"></p>
         <nav>
           <ul aria-label="Social links" class="contact-navigation" role="list">
             ${this.renderContactLinks()}
@@ -38,7 +38,7 @@ export default class Contact {
       </div>
 
       <div class="copyright-container | container invisible">
-        <p class="copyright | fw-light">Designed & Developed by</p>
+        <p class="copyright | fs-x-small fw-light">Designed & Developed by</p>
         <p class="signature | fs-medium">EDI B.</p>
       </div>
     `;
