@@ -16,19 +16,21 @@ export default class PopupMessages {
       };
     }
 
-    this.loadPopupMessages = () => setTimeout(() => this.home.popup.forEach(popup => popup.classList.add("display-flex")), 4000);
+    this.loadPopupMessages = () => {
+      setTimeout(() => this.home.popup.forEach(popup => popup.classList.add("display-flex")), 4000);
+    };
   }
 
   initiate() {
     window.addEventListener("keydown", this.hideFullscreenMessage);
-
+    
     this.loadPopupMessages();
     this.home.popup.forEach(popup => popup.addEventListener("click", event => {
       this.popupSound.play();
       event.target.parentElement.classList.add("hidden-element");
     }));
     
-    if (window.innerHeight === screen.height || window.innerHeight >= 850 || window.innerWidth >= 1680 || (window.innerWidth <= 1024 && screen.orientation.type === "portrait-primary")) {
+    if(window.innerHeight===screen.height || (window.innerHeight>window.innerWidth) || window.innerHeight>=900) {
       window.removeEventListener("keydown", this.hideFullscreenMessage);
       this.home.fullscreen.classList.add("hidden-element");
     };
