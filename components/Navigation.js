@@ -7,9 +7,7 @@ export default class Navigation {
       for(let i = 0; i < data["navigation"].label.length; i++) {
         container += `
           <li class="navigation-link | fs-medium fw-sm-bold" role="listitem">
-            <a href="${data["navigation"].link[i]}" role="link">
-              ${data["navigation"].label[i]}
-            </a>
+            <a href="${data["navigation"].link[i]}">${data["navigation"].label[i]}</a>
           </li>
         `;
       };
@@ -32,7 +30,7 @@ export default class Navigation {
         <ol class="navigation-content | container" role="list" type="I">
           <button class="fw-light" id="close-navigation-button" type="button">✕</button>
           ${this.renderNavigationLinks()}
-          <a class="resume-button | fs-small fw-sm-bold" download href="/" role="link">Resume</a>
+          <a class="resume-button | fs-small fw-sm-bold" download href="/" role="listitem">Resume</a>
         </ol>
       </nav>
       <button class="fw-light" id="open-navigation-button" type="button">III</button>
