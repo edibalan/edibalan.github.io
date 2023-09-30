@@ -21,7 +21,7 @@ export default class Navigation {
   render() {
     return `
       <div class="logo-container | container">
-        <button class="logo"><img alt="logo" src="./assets/logo.jpeg"></button>
+        <button class="logo"><img alt="logo" src="./assets/logo.webp"></button>
         <div class="popup | container">
           <i class="popup-symbol | fa-solid fa-caret-up"></i>
           <p class="popup-text | fs-x-small fw-sm-bold">Psst! I am button too!</p>
