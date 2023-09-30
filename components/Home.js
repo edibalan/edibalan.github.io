@@ -19,7 +19,7 @@ export default class Home {
             <a class="projects-button | fs-x-small fw-sm-bold" href="#projects">Check out my work</a>
           </div>
           <div class="avatar-container">
-            <img class="avatar" src="./assets/avatar.jpeg" alt="avatar" />
+            <img class="avatar" src="./assets/avatar.webp" alt="avatar" />
           </div>
           <div class="popup | container" id="fullscreen-message">
             <i class="popup-symbol | fa-solid fa-caret-up"></i>
