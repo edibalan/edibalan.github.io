@@ -32,7 +32,7 @@ export default class ThemesHandler {
       this.home.logo.addEventListener("click", this.lightMode);
 
       this.audio.darkMode.play();
-      this.favicon.href = "/assets/favicon.png";
+      this.favicon.href = "/assets/favicon.webp";
       this.home.avatar.classList.remove("light-mode-outline");
       this.home.popup.classList.add("hidden-element");
   
@@ -59,7 +59,7 @@ export default class ThemesHandler {
       this.home.logo.addEventListener("click", this.darkMode);
 
       this.audio.lightMode.play();
-      this.favicon.href = "/assets/favicon-inverted.png";
+      this.favicon.href = "/assets/favicon-inverted.webp";
       this.home.avatar.classList.add("light-mode-outline");
       this.home.popup.classList.add("hidden-element");
 
