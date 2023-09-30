@@ -168,7 +168,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 .about-background, .projects-element-content {opacity: 0.65;}
 .about-background, .signature {margin-top: 1.25rem;}
 .about-background {
-  background-image: url(/assets/about-background.jpeg);
+  background-image: url(/assets/about-background.webp);
   border-radius: 0.75rem;
   transition-duration: 1.25s;
   width: 67.5vw;
@@ -268,7 +268,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 
   .footer {
     aspect-ratio: 2 / 2.01;
-    background-image: url(/assets/mobile_assets/contact-banner.png);
+    background-image: url(/assets/mobile_assets/contact-banner.webp);
     background-position: center -1.5rem;
     background-repeat: no-repeat;
     background-size: cover;
@@ -460,7 +460,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 
   .contact-navigation {visibility: hidden;}
   .contact-banner {
-    background-image: url(/assets/contact-banner.png);
+    background-image: url(/assets/contact-banner.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 93.25rem 52rem;
