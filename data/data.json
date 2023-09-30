@@ -21,7 +21,7 @@
       "/"
     ],
 
-    "poster": ["banner-one.png", "banner-two.png", "banner-three.png", "unavailable.png"],
+    "poster": ["banner-one.webp", "banner-two.webp", "banner-three.webp", "unavailable.webp"],
     "src": ["project-one.gif", "project-two.gif", "project-three.gif", ""],
     
     "tech": {
