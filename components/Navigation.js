@@ -31,7 +31,7 @@ export default class Navigation {
           <button class="fw-light" id="close-navigation-button" role="listitem" type="button">✕</button>
           ${this.renderNavigationLinks()}
           <a class="resume-button | fs-small fw-sm-bold" download href="https://drive.google.com/file/d/19D0_nzkARqGSx7m4bd40v139XjvzfHAY/view?usp=sharing"
-            role="listitem">Resume</a>
+            role="listitem" target="_blank">Resume</a>
         </ol>
       </nav>
       <button class="fw-light" id="open-navigation-button" type="button">III</button>
