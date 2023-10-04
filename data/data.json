@@ -15,9 +15,9 @@
   "projects-elements": {
     "id": ["project-one", "project-two", "project-three", "project-four"],
     "link": [
+      "https://edibalan.github.io/atlantis-studio",
       "https://edibalan.github.io/weather-app",
       "https://edibalan.github.io/alice-kineto",
-      "https://edibalan.github.io/atlantis-studio",
       "/"
     ],
 
@@ -29,7 +29,7 @@
       "title": ["HTML", "CSS", "JavaScript"]
     },
     
-    "title": ["Weather App", "Alice Kineto", "Template page", "Unavailable"]
+    "title": ["Template page", "Weather App", "Alice Kineto", "Unavailable"]
   },
 
   "contact-links": {
