@@ -22,12 +22,7 @@ export default class Projects {
           <img alt="projects-banner" class="projects-banner"
             src="./assets/mobile_assets/${data["projects-elements"].poster[index]}">
         `;
-      } else {
-        return `
-          <img alt="projects-banner" class="projects-banner"
-            src="./assets/${data["projects-elements"].poster[index]}">
-        `;
-      };
+      } else return `<img alt="projects-banner" class="projects-banner" src="./assets/${data["projects-elements"].poster[index]}">`;
     };
 
     this.renderProjectsElements = () => {
@@ -42,7 +37,7 @@ export default class Projects {
             <div class="projects-element-description | container invisible">
               <a class="project-link" href="${data["projects-elements"].link[i]}" target="_blank">
                 <h2 class="projects-element-title | fs-medium">
-                  ${data["projects-elements"].title[i]}
+                  ${i + 1}. ${data["projects-elements"].title[i]}
                 </h2>
               </a>
               <div class="projects-element-techs | container">${this.projectsTechs}</div>
