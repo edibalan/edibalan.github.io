@@ -1,28 +1,9 @@
 "use strict";
 export default class Projects {
-  constructor(data) {
-    this.renderProjectsTechs = () => {
-      let container = "";
-
-      for(let i = 0; i < 3; i++) {
-        container += `
-          <p class="projects-element-tech">
-            <i class="fs-medium fa-brands ${data["projects-elements"].tech.link[i]}"
-              title="${data["projects-elements"].tech.title[i]}"></i>
-          </p>
-        `;
-      }
-
-      return container;
-    }
-
+  constructor(data) {  
     this.renderProjectsBanners = index => {
-      if (window.innerHeight > window.innerWidth || window.innerHeight >= 720) {
-        return `
-          <img alt="projects-banner" class="projects-banner"
-            src="./assets/mobile_assets/${data["projects-elements"].poster[index]}">
-        `;
-      } else return `<img alt="projects-banner" class="projects-banner" src="./assets/${data["projects-elements"].poster[index]}">`;
+      if (window.innerHeight > window.innerWidth || window.innerHeight >= 720) return `<img alt="projects-banner" class="projects-banner" src="./assets/mobile_assets/${data["projects-elements"].poster[index]}">`;
+      else return `<img alt="projects-banner" class="projects-banner" src="./assets/${data["projects-elements"].poster[index]}">`;
     };
 
     this.renderProjectsElements = () => {
@@ -40,16 +21,13 @@ export default class Projects {
                   ${i + 1}. ${data["projects-elements"].title[i]}
                 </h2>
               </a>
-              <div class="projects-element-techs | container">${this.projectsTechs}</div>
             </div>
           </div>
         `;
       }
 
       return container;
-    }
-
-    this.projectsTechs = this.renderProjectsTechs();
+    };
   }
 
   render() {
