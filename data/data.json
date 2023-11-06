@@ -23,12 +23,6 @@
 
     "poster": ["banner-one.webp", "banner-two.webp", "banner-three.webp", "unavailable.webp"],
     "src": ["project-one.gif", "project-two.gif", "project-three.gif", ""],
-    
-    "tech": {
-      "link": ["fa-html5", "fa-css3-alt", "fa-js"],
-      "title": ["HTML", "CSS", "JavaScript"]
-    },
-    
     "title": ["Template page", "Weather App", "Alice Kineto", "Unavailable"]
   },
 
