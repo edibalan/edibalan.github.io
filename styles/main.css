@@ -192,6 +192,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 .projects-content {row-gap: 1.5rem;}
 .projects-element {row-gap: 0.75rem; width: 98%;}
 .projects-element-content {outline: 0.1rem solid var(--grey-300);}
+.projects-element-title {letter-spacing: 0.05rem;}
 .projects-banner {padding: 0.275rem;}
 .outline {outline: 0.275rem solid var(--green-300);}
 
@@ -252,7 +253,6 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .projects-section {padding-bottom: 1.625rem;}
   .projects-content {column-gap: 1.75rem; display: grid; grid-template-columns: repeat(2, 1fr);}
   .projects-content, .projects-element {row-gap: 0.5rem;}
-  .projects-element-title {letter-spacing: -0.05rem;}
 }
 
 /* WIDTH >= 540px */
@@ -264,7 +264,6 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .about-section, .projects-section, .footer {padding-block: 5.5rem;}
   .about-description {letter-spacing: 0.05rem;}
   .projects-section {padding-bottom: 3.75rem;}
-  .projects-element-title {letter-spacing: 0.03rem;}
 
   .footer {
     aspect-ratio: 2 / 2.01;
