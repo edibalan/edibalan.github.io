@@ -162,7 +162,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 .page-button {display: none;}
 
 .about-section, .projects-section, .footer {padding-block: 4.25rem;}
-.about-description {color: var(--grey-100); hyphens: auto; letter-spacing: 0.02rem; line-height: 1.75rem;}
+.about-description {color: var(--grey-100); hyphens: auto; letter-spacing: 0.04rem; line-height: 1.75rem;}
 .about-description p {margin-top: 0.75rem;}
 .about-description-links:hover {border-bottom: 0.05rem solid var(--green-300);}
 .brands {letter-spacing: 0.01rem;}
@@ -225,6 +225,8 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   
   .projects-content {row-gap: 1.75rem;}
 }
+
+/* WIDTH >= 390px */ @media (min-width: 24.35em) { .about-description {letter-spacing: 0.06rem;} }
 
 /* WIDTH >= 410px */
 @media (min-width: 25.625em) {
