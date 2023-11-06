@@ -31,7 +31,7 @@ body {
 a:not([class]) {text-decoration-skip-ink: auto;}
 
 /* Make images easier to work with */
-img, picture, svg, .about-background, a, button, .popup, .projects-element-tech {user-select: none;}
+img, picture, svg, .about-background, a, button, .popup {user-select: none;}
 img, picture, svg, .projects-button, .about-background {
   cursor: none;
   display: block;
@@ -74,7 +74,7 @@ img, picture, svg, .projects-button, .about-background {
 }
 
 body {letter-spacing: 0.03rem; overflow-x: hidden;}
-body, a, button, .popup, .page-button, .projects-element-tech, .contact-nav-menu-link {color: var(--grey-300);}
+body, a, button, .popup, .page-button, .contact-nav-menu-link {color: var(--grey-300);}
 body, .main, .navigation-content, .about-content, .projects-content, .projects-element, .footer, .contact-content, 
   .copyright-container {flex-direction: column;}
 body, .header, .navigation {background-color: var(--blue-500);}
@@ -193,7 +193,6 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 .projects-element {row-gap: 0.75rem; width: 98%;}
 .projects-element-content {outline: 0.1rem solid var(--grey-300);}
 .projects-banner {padding: 0.275rem;}
-.projects-element-techs {column-gap: 0.5rem;}
 .outline {outline: 0.275rem solid var(--green-300);}
 
 .footer {padding-bottom: 0;}
@@ -253,7 +252,6 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .projects-section {padding-bottom: 1.625rem;}
   .projects-content {column-gap: 1.75rem; display: grid; grid-template-columns: repeat(2, 1fr);}
   .projects-content, .projects-element {row-gap: 0.5rem;}
-  .projects-element-techs {column-gap: 0.25rem;}
   .projects-element-title {letter-spacing: -0.05rem;}
 }
 
@@ -302,7 +300,6 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .projects-button {margin-left: 0;}
   
   .projects-section {padding-bottom: 2.875rem;}
-  .projects-element-techs {column-gap: 0.5rem;}
 
   .footer {aspect-ratio: 2 / 2.04;}
   .contact-navigation {gap: 1.75rem; margin-top: 1.75rem;}
