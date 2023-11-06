@@ -6,10 +6,10 @@
 
   "home-description": ["Hi !", "I am Edi ,", "Web Developer"],
   "about-description": [
-    "My name is Bălan Eduard I am 26 yo and I consider myself a person who has a infinite passion when it comes to the area of developing websites, platforms and web apps for the vast world of the Internet.",
-    "In the last two years I gained experience in frontend development by studying and practicing knowledge from platforms specialized web development <span class='brands'>(W3&shySchools, Mozilla developers, Stack&shyOverflow)</span>, but also from tutorials of advanced developers on You&shytube. I also enrolled to web development course of <a class='about-description-links' href='https://teachbit.ro' target='_blank'>Teachbit</a> platform in 2022.",
-    "As a person I am perseverant, flexible, receptive, always eager to le&shyarn new things and give my best in every project that I am involved.",
-    "Here is a list of technologies that I've been worked with: <span style='color:var(--green-300);'>HTML, CSS, Boots&shytrap, Java&shyScript, JSON, AJAX, Fetch, API</span>"
+    "My name is Bălan Eduard I am 26 years old and I consider myself a person who has a great passion when it comes to development of websites, platforms and apps for the vast world of the Internet.",
+    "During the last two years I gained experience in web development by studying and practicing of knowledge from platforms specialized in web development (W3Schools, Mozilla developers, freeCodeCamp, StackOverflow), but also from tutorials of more advanced developers. I developed some personal projects to serve as proof of my experience.",
+    "As a person I consider myselft persistent, flexible, receptive, always eager to learn new things and to give my best in every project that I am involved.",
+    "Here is a list of technologies that I used: <span style='color:var(--green-300);'>HTML, CSS, Boots&shytrap, Java&shyScript, JSON, AJAX, Fetch, API</span>"
   ],
 
   "projects-elements": {
