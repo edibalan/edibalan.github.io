@@ -30,8 +30,7 @@ export default class Navigation {
         <ol class="navigation-content | container" role="list" type="I">
           <button class="fw-light" id="close-navigation-button" role="listitem" type="button">✕</button>
           ${this.renderNavigationLinks()}
-          <a class="resume-button | fs-small fw-sm-bold" download href="https://drive.google.com/file/d/19D0_nzkARqGSx7m4bd40v139XjvzfHAY/view?usp=sharing"
-            role="listitem" target="_blank">Resume</a>
+          <a class="resume-button | fs-small fw-sm-bold" download href="https://drive.google.com/file/d/1guefCuZIvgxyvhQP--7C_Ajze_98FkLx/view" role="listitem" target="_blank">Resume</a>
         </ol>
       </nav>
       <button class="fw-light" id="open-navigation-button" type="button">III</button>
