@@ -264,7 +264,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
    #close-navigation-button {right: 2.5rem; top: 1.5rem;}
 
   .about-section, .projects-section, .footer {padding-block: 5.5rem;}
-  .about-description {letter-spacing: 0.05rem;}
+  .about-description {letter-spacing: 0.045rem;}
   .projects-section {padding-bottom: 3.75rem;}
 
   .footer {
@@ -317,6 +317,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .home-container {justify-content: flex-start;}
   .avatar-container {right: 9vw; width: 8.25rem;}
 
+  .about-description {letter-spacing: 0.035rem;}
   .home-button {bottom: 1.5rem; right: 1.25rem;}
 
   .projects-section {padding-bottom: 1.375rem;}
@@ -506,7 +507,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .home-description h1:nth-of-type(3) {margin-bottom: 3.1rem;}
 
   .about-description {line-height: 1.535rem;}
-  .about-background {margin-top: 0.9375rem;}
+  .about-background {margin-top: 0.75rem;}
 
   .contact-navigation {gap: 2.5rem; margin-top: 2.75rem;}
   .contact-banner {background-size: 93.25rem 54.5rem;}
