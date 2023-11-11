@@ -16,6 +16,12 @@
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "./assets/favicon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
