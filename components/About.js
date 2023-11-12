@@ -16,7 +16,7 @@ export default class About {
         <a class="page-button previous-button | fs-sm-large" id="home-link" href="#home"><i class="fa-solid fa-circle-chevron-left"></i></a>
         
         <div class="about-container">
-          <h1 class="about-title | fs-large fw-bold invisible">Greetings !</h1>
+          <h2 class="about-title | fs-large fw-bold invisible">Greetings !</h2>
           <div class="about-content | container">
             <div class="about-description | fs-small fw-light">
               ${this.renderAboutDescription()}
