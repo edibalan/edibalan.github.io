@@ -17,9 +17,9 @@ export default class Projects {
             </div>
             <div class="projects-element-description | container invisible">
               <a class="project-link" href="${data["projects-elements"].link[i]}" target="_blank">
-                <h2 class="projects-element-title | fs-medium">
+                <h3 class="projects-element-title | fs-medium">
                   ${i + 1}. ${data["projects-elements"].title[i]}
-                </h2>
+                </h3>
               </a>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default class Projects {
         </a>
 
         <div class="projects-container">
-          <h1 class="projects-title | fs-large fw-bold invisible">Projects</h1>
+          <h2 class="projects-title | fs-large fw-bold invisible">Projects</h2>
           <div class="projects-content | container">${this.renderProjectsElements()}</div>
         </div>
         
