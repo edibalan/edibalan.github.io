@@ -27,7 +27,7 @@ export default class Contact {
       </a>
 
       <div class="contact-content | container">
-        <h1 class="contact-title | fs-large fw-sm-bold invisible">Get in Touch</h1>
+        <h2 class="contact-title | fs-large fw-sm-bold invisible">Get in Touch</h2>
         <p class="invisible" id="contact-title-underline"></p>
         <nav>
           <ul aria-label="Social links" class="contact-navigation" role="list">
