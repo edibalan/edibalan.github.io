@@ -18,8 +18,8 @@
       "purpose": "any"
     },
     {
-      "src": "./assets/favicon-72.png",
-      "sizes": "72x72",
+      "src": "./assets/favicon-57.png",
+      "sizes": "57x57",
       "type": "image/png",
       "purpose": "maskable"
     }
