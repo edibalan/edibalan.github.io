@@ -9,7 +9,7 @@
       "src": "./assets/favicon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable"
     },
     {
       "src": "./assets/favicon-144.png",
@@ -21,7 +21,7 @@
       "src": "./assets/favicon-57.png",
       "sizes": "57x57",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     }
   ]
 }
