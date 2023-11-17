@@ -145,27 +145,23 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 .home-container {flex-direction: column-reverse;}
 
 .home-description {font-family: var(--ff-description);}
-.home-description h1 {letter-spacing: -0.2rem;}
 .home-description h1, .about-description-links, .contact-title {text-transform: none;}
-.home-description h1:nth-of-type(2) {margin-block: 5vh;}
-.home-description h1:nth-of-type(3) {margin-bottom: 5vh;}
+.home-description h1 {letter-spacing: -0.2rem; line-height: 13vh;}
 
 .avatar-container, .avatar {border-radius: 50%;}
 .avatar-container {
-  margin-bottom: 2.5vh;
   outline: 0.125rem solid var(--green-300);
   padding: 0.25rem;
   width: 41vw;
 }
 
-.projects-button {line-height: 2.75rem; width: fit-content;}
+.projects-button {line-height: 2.75rem; margin-top: 2.25vh; width: fit-content;}
 .page-button {display: none;}
 
 .about-section, .projects-section, .footer {padding-block: 4.25rem;}
 .about-description {color: var(--grey-100); hyphens: auto; letter-spacing: 0.04rem; line-height: 1.75rem;}
 .about-description p {margin-top: 0.75rem;}
 .about-description-links:hover {border-bottom: 0.05rem solid var(--green-300);}
-.brands {letter-spacing: 0.01rem;}
 
 .about-background, .projects-element-content {opacity: 0.65;}
 .about-background, .signature {margin-top: 1.25rem;}
@@ -226,12 +222,13 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .projects-content {row-gap: 1.75rem;}
 }
 
-/* WIDTH >= 390px */ @media (min-width: 24.35em) { .about-description {letter-spacing: 0.06rem;} }
+/* WIDTH >= 390px */ @media (min-width: 24.35em) { .about-description, .brands {letter-spacing: 0.06rem;} }
 
 /* WIDTH >= 410px */
 @media (min-width: 25.625em) {
   .main, .footer {padding-inline: 2rem;}
   .home-description h1 {letter-spacing: -0.25rem;}
+  .brands {letter-spacing: 0.04rem;}
   .projects-content {row-gap: 2rem;}
 }
 
@@ -295,13 +292,11 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .navigation {grid-template-columns: 40% 60%;}
   
   .home-container {align-items: start; flex-direction: row;}
-  .home-description h1:nth-of-type(2) {margin-block: 6vh;}
-  .home-description h1:nth-of-type(3) {margin-bottom: 6vh;}
-  .avatar-container {margin-top: 0.625rem; position: absolute; right: 8.25vw; width: 8rem;}
-  .projects-button {margin-left: 0;}
+  .home-description h1 {line-height: 10rem;}
+  .avatar-container {margin-top: 3.25rem; position: absolute; right: 9vw; width: 7.875rem;}
+  .projects-button {margin-top: 0.875rem; margin-left: 0;}
   
   .projects-section {padding-bottom: 2.875rem;}
-
   .footer {aspect-ratio: 2 / 2.04;}
   .contact-navigation {gap: 1.75rem; margin-top: 1.75rem;}
 }
@@ -315,7 +310,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .home-section {width: 100%;}
   .home-description h1 {letter-spacing: -0.35rem;}
   .home-container {justify-content: flex-start;}
-  .avatar-container {right: 9vw; width: 8.25rem;}
+  .avatar-container {right: 10.5vw; width: 8.375rem;}
 
   .about-description {letter-spacing: 0.035rem;}
   .home-button {bottom: 1.5rem; right: 1.25rem;}
@@ -383,7 +378,8 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 @media (min-width: 53.75em) {
   .main, .footer {padding-inline: 0;}
   .home-container, .about-container, .projects-container {width: 43.75rem;}
-  .avatar-container {width: 8.5rem;}
+  .home-description h1 {line-height: 12rem;}
+  .avatar-container {margin-top: 4rem; width: 8.625rem;}
 
   .about-description {letter-spacing: 0.04rem;}
 
@@ -478,15 +474,15 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .header {box-shadow: none; padding-block: 0.875rem; padding-inline: 2.5rem;}
 
   .home-description, .avatar-container {position: relative;}
+  .home-description h1 {line-height: 7.05rem;}
   .home-description {left: 4.5rem;}
-  .home-description h1:nth-of-type(2) {margin-block: 2.3rem;}
-  .home-description h1:nth-of-type(3) {margin-bottom: 2.3rem;}
-  .avatar-container {right: 4rem;}
+
+  .avatar-container {margin-top: 1.375rem; right: 4rem;}
   #fullscreen-message {
     line-height: 1.175rem;
     position: absolute;
     right: -6.5rem;
-    top: 0.75rem;
+    top: 1.375rem;
     width: 9.25rem;
   }
 
@@ -503,8 +499,9 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 @media (orientation: landscape) and (min-height: 45em) {
   .header {padding-block: 1rem;}
 
-  .home-description h1:nth-of-type(2) {margin-block: 3.1rem;}
-  .home-description h1:nth-of-type(3) {margin-bottom: 3.1rem;}
+  .home-description h1 {line-height: 7.7rem;}
+  .avatar-container {margin-top: 1.75rem;}
+  .projects-button {margin-top: 1.075rem;}
 
   .about-description {line-height: 1.535rem;}
   .about-background {margin-top: 0.75rem;}
@@ -523,7 +520,7 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
 
 /* WIDTH >= 1280px */
 @media (min-width: 80em) {
-  #fullscreen-message{right: -12rem; top: 0.875rem; width: 14.75rem;}
+  #fullscreen-message {right: -12rem;top: 1.75rem; width: 14.75rem;}
   .copyright-container {left: -34vw;}
 }
 
@@ -538,9 +535,9 @@ a:hover, .popup-symbol, .popup-text, .navigation-content ::marker, #close-naviga
   .header {padding-inline: 3.5rem;}
 
   .home-container, .about-container, .projects-container {width: 47.75rem;}
-  .home-description h1:nth-of-type(2) {margin-block: 3.5rem;}
-  .home-description h1:nth-of-type(3) {margin-bottom: 3.5rem;}
+  .home-description h1 {line-height: 9.125rem;}
   .avatar-container {width: 9rem;}
+  .projects-button {margin-top: 1.25rem;}
 
   .about-description {line-height: 1.875rem;}
   .about-description p {margin-top: 0.625rem;}
