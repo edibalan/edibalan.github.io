@@ -4,7 +4,7 @@ export default class Home {
     this.renderHomeDescription = () => {
       let container = "";
 
-      data["home-description"].forEach(index => container += `<h1>${index}</h1>`);
+      data["home-description"].forEach(index => container += `${index}<br>`);
 
       return container;
     };
@@ -15,7 +15,7 @@ export default class Home {
       <section class="home-section | container" id="home">
         <div class="home-container | container">
           <div class="home-description | fs-x-large fw-bolder">
-            ${this.renderHomeDescription()}
+            <h1>${this.renderHomeDescription()}</h1>
             <a class="projects-button | fs-x-small fw-sm-bold" href="#projects">Check out my work</a>
           </div>
           <div class="avatar-container">
