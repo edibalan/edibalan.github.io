@@ -7,22 +7,26 @@
   "home-description": ["Hi !", "I am Edi ,", "Web Developer"],
   "about-description": [
     "My name is Bălan Eduard I am 26 years old and I consider myself a person who has a great passion when it comes to development of websites, platforms and apps for the vast world of the Internet.",
-    "During the last two years I gained experience in web development by studying and practicing of knowledge from platforms specialized in web development (W3Schools, Mozilla developers, freeCodeCamp, StackOverflow), but also from tutorials of more advanced developers. I developed some personal projects to serve as proof of my experience.",
+
+    "During the last two years I gained experience in web development by studying and practicing of knowledge from platforms specialized in web development (W3&shySchools, Mozilla developers, free&shyCode&shyCamp, Stack&shyOverflow) , but also from tutorials of more advanced developers. I developed some personal projects to serve as proof of my experience.",
+
     "As a person I consider myself persistent, flexible, receptive, always eager to learn new things and to give my best in every project that I am involved.",
-    "Here is a list of technologies that I used: <span style='color:var(--green-300);'>HTML, CSS, Boots&shytrap, Java&shyScript, JSON, AJAX, Fetch, API</span>"
+    
+    "Here is a list of technologies that I used: <span class='green'>HTML, CSS, Bootstrap, JS, JSON, AJAX, Fetch, API, SASS, BEM, Gulp</span>"
   ],
 
   "projects-elements": {
     "id": ["project-one", "project-two", "project-three", "project-four"],
     "link": ["https://edibalan.github.io/atlantis-studio", "https://edibalan.github.io/weather-app", "https://edibalan.github.io/alice-kineto", "/"],
+    "link-github": ["https://github.com/edibalan/atlantis-studio", "https://github.com/edibalan/weather-app", "https://github.com/edibalan/alice-kineto", ""],
     "poster": ["banner-one.webp", "banner-two.webp", "banner-three.webp", "unavailable.webp"],
     "src": ["project-one.gif", "project-two.gif", "project-three.gif", ""],
-    "title": ["Template page", "Weather App", "Alice Kineto", "Unavailable"]
+    "title": ["Atlantis", "Weather App", "Alice Kineto", "Unavailable"]
   },
 
   "contact-links": {
-    "icon": [ "fa-solid fa-square-phone", "fa-brands fa-square-facebook", "fa-solid fa-earth-americas", "fa-brands fa-square-github", "fa-solid fa-envelope", "fa-brands fa-linkedin"],
+    "icon": ["fa-solid fa-square-phone", "fa-brands fa-square-facebook", "fa-solid fa-earth-americas", "fa-brands fa-square-github", "fa-solid fa-envelope", "fa-brands fa-linkedin"],
     "label": ["Call me", "Facebook", "Find me", "Github", "Text me", "LinkedIn"],
-    "link": ["tel:+40754595970", "https://www.facebook.com/edibalan123", "https://goo.gl/maps/aSY3U2METJoanY8z6", "https://github.com/edibalan", "mailto:edibalan97@gmail.com", "https://www.linkedin.com/in/edibalan"]
+    "link": ["tel:0", "https://www.facebook.com/edibalan123", "https://goo.gl/maps/aSY3U2METJoanY8z6", "https://github.com/edibalan", "mailto:edibalan97@gmail.com", "https://www.linkedin.com/in/edibalan"]
   }
 }
