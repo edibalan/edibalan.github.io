@@ -1,0 +1,231 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+:root::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.375rem;
+}
+
+:root::-webkit-scrollbar-thumb {
+  background-color: $green;
+
+  &:hover {
+    background-color: hsl(146, 100%, 32%);
+  }
+
+  &:active {
+    background-color: hsl(120, 100%, 25%);
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+
+  &:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &, &::before, &::after {
+    box-sizing: inherit;
+  }
+
+  & ::selection {
+    background-color: $green;
+    color: $blue-500;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $blue-500;
+  flex-direction: column;
+  line-height: 1.25;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+}
+
+body, button, a, .page-button {
+  color: $grey-300;
+  font-family: $ff-primary;
+}
+
+ul {
+  list-style: none;
+}
+
+li::marker, button, h2, h3:hover, .page-button:hover {
+  color: $green;
+}
+
+h1 {
+  font-weight: $fw-xb;
+  text-transform: none;
+
+  @each $breakpoint, $map in $home-description-portrait-settings {
+    $font-sizes: map-get($map, 'font-size');
+    $spaces: map-get($map, 'space');
+  
+    @media (min-width: $breakpoint) {
+      font-size: $font-sizes;
+      margin-bottom: $spaces;
+    }
+  }
+
+  @include createBreakpoints(min-width, $home-description-font-sizes, font-size, landscape);
+  @include createBreakpoints(min-height, $home-description-spacing-sizes, margin-bottom, landscape);
+}
+
+h1, a, button {
+  letter-spacing: 0.05rem;
+}
+
+h2, .page-button {
+  font-size: $fs-lg;
+}
+
+h2, h3 {
+  font-weight: $fw-bd;
+  letter-spacing: 0.1rem;
+  line-height: 0.8;
+}
+
+h2, h3, a, button {
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: $fs-md;
+}
+
+p {
+  font-size: $fs-sm;
+  font-weight: $fw-lt;
+}
+
+button {
+  border: 0.125rem solid $green;
+  border-radius: 0.375rem;
+  font-size: $fs-xs;
+  outline: none;
+}
+
+button, a {
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
+img, picture, svg {
+  cursor: none;
+  display: block;
+  max-width: 100%;
+}
+
+img, picture, svg, button, a {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+}
+
+.container, body {
+  display: flex;
+}
+
+.main, .footer {
+  flex-direction: column;
+  margin-inline: auto;
+  width: min(100% - 12vw, 46.875rem);
+}
+
+.page-button {
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+}
+
+.spacer {
+  @include createBreakpoints(min-width, $spacer-size, padding-block);
+}
+
+// WIDTH >= 1024px
+@media (min-width: 64em) {
+  :root::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  body, .main {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .main {
+    width: auto;
+  }
+
+  .next-button {
+    margin-right: 0.875rem;
+    right: 0;
+  }
+
+  .page-button {
+    position: relative;
+    z-index: 2;
+  }
+
+  .previous-button {
+    left: 0;
+    margin-left: 0.875rem;
+  }
+}
+
+// UTILITY CLASSES
+.blurred {
+  filter: blur(0.4rem);
+}
+
+.green {
+  color: $green;
+}
+
+.hidden-element {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.light-mode {
+  &, .header {
+    background-color: hsl(208, 100%, 98%);
+  }
+
+  a, button, h1, h3, p {
+    color: $grey-500;
+  }
+}

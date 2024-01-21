@@ -1,0 +1,102 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.home {
+  height: 100vh;
+
+  &, &__content {
+    width: 100%;
+  }
+
+  &__content {
+    flex-direction: column-reverse;
+
+    @media (min-width: 64em) and (orientation: landscape) {
+      width: fit-content;
+    }
+
+    &.top-position {
+      top: 0;
+    }
+  }
+
+  &__description {
+    a, #projects-btn {
+      display: block;
+      margin-inline: auto;
+      width: fit-content;
+    }
+
+    #projects-btn {
+      @include createBreakpoints(min-width, $projects-btn-spacing, padding);
+
+      &:hover {
+        background-color: $green;
+        color: $blue-500;
+      }
+    }
+  }
+
+  &__avatar {
+    margin-bottom: 2vh;
+    outline: 0.125rem solid $green;
+    padding: 0.25rem;
+    width: min(42vw, 9.5rem);
+
+    @include createBreakpoints(min-width, $avatar-position, margin);
+    @include createBreakpoints(min-width, $avatar-width, width);
+    @include createBreakpoints(min-height, $avatar-position-screen-height, margin, landscape);
+
+    // HEIGHT <= 520px
+    @media (max-height: 32.5em) and (orientation: portrait) {
+      display: none;
+    }
+
+    // WIDTH >= 712px
+    @media (min-width: 44.5em) {
+      position: absolute;
+    }
+
+    // WIDTH >= 1680px
+    @media (min-width: 105em) {
+      margin: 0 0 18.5rem 31rem;
+
+      // and HEIGHT >= 1000px
+      @media (min-height: 62.5em) {
+        margin: 0 0 20rem 31rem;
+      }
+    }
+
+    // WIDTH >= 1920px
+    @media (min-width: 120em) {
+      margin: 0px 0 21rem 34rem;
+    }
+
+    &, & img {
+      border-radius: 50%;
+    }
+  }
+
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    flex: none;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    width: 100vw;
+
+    &__content {
+      margin-inline: auto;
+      @include position(1.25s, relative, 100vh);
+    }
+  }
+
+  @media (min-width: 64em) and (orientation: landscape) {
+    &__description a {
+      margin-inline: 0;
+
+      #projects-btn {
+        padding: 1rem 1.5rem;
+      }
+    }
+  }
+}

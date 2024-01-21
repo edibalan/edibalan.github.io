@@ -1,0 +1,87 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.footer {
+  @include createBreakpoints(min-width, $footer-section-spacing, padding-top);
+
+  &__content {
+    @include createBreakpoints(min-width, $section-container-width, width);
+    @include createBreakpoints(min-width, $footer-content-spacing, padding-top);
+  }
+
+  &, &__content, &__copyright {
+    flex-direction: column;
+  }
+
+  &__underline {
+    background-color: $green;
+    height: 0.125rem;
+    margin-block: 1rem;
+    width: 4.5rem;
+  }
+
+  &__nav {
+    @include createBreakpoints(min-width, $footer-nav-gap, gap);
+    @include createBreakpoints(min-width, $footer-nav-spacing, margin);
+    @include grid-cols(2);
+
+    &__link {
+      color: $grey-300;
+      cursor: pointer;
+      font-size: $fs-xs;
+      justify-content: space-between;
+      padding: 0.5rem;
+      text-decoration: none;
+
+      @include border(none, 0.125rem, $green, 0.375rem);
+      @include createBreakpoints(min-width, $footer-links-width, width);
+
+      &:hover {
+        background-color: $green;
+        color: $blue-500;
+      }
+
+      & i {
+        font-size: $fs-sl;
+      }
+    }
+  }
+
+  &__copyright__signature {
+    font-family: $ff-secondary;
+    font-size: $fs-lg;
+    margin: 0.5rem 0 1.25rem;
+    transform: rotateZ(-17.5deg);
+  }
+
+  // WIDTH >= 460px
+  @media (min-width: 28.75em) {
+    gap: 3rem;
+    @include border;
+
+    &__nav__link, &__copyright {
+      color: black;
+    }
+  }
+
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    flex: none;
+    height: 100vh;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    width: 100vw;
+
+    @include border(none, 0.25rem, $green, 0);
+    @include grid-cols(3);
+
+    &__content {
+      @include border;
+      @include position(1.25s, relative, 100vh);
+    }
+
+    &__copyright {
+      position: relative;
+    }
+  }
+}

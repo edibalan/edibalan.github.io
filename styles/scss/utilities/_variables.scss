@@ -1,0 +1,255 @@
+// Colors
+$blue-300: hsl(214, 71%, 16%);
+$blue-500: hsl(214, 71%, 12%);
+$green: hsl(146, 100%, 38%);
+$grey-100: hsl(0, 0%, 84%);
+$grey-300: hsl(0, 0%, 78%);
+$grey-500: hsl(0, 0%, 28%);
+$white: hsl(0, 0%, 100%);
+
+// Font families
+$ff-primary: 'Kanit', sans-serif;
+$ff-secondary: 'Comforter Brush', cursive;
+
+// Font sizes
+$fs-xs: 0.9375rem;
+$fs-sm: 1.125rem;
+$fs-md: 1.25rem;
+$fs-sl: 1.375rem;
+$fs-lg: 1.625rem;
+$fs-xl: 11.75vw;
+
+// Font weights
+$fw-lt: 300;
+$fw-bd: 600;
+$fw-xb: 700;
+
+// Section container width
+$section-container-width: (
+  64em: 46.875rem,
+  105em: 50rem,
+  120em: 53.125rem,
+);
+
+// Header spacing
+$header-spacing: (
+  0: 0.75rem,
+  24.3em: 0.875rem,
+  28.75em: 1.25rem,
+  44.5em: 1.75rem,
+  50em: 2rem,
+);
+
+// Header spacing on landscape mode
+$header-spacing-landscape: (
+  64em: 0.75rem 0,
+  90em: 1.25rem 0,
+);
+
+// Header width
+$header-width: (
+  64em: 50rem,
+  105em: 53.125rem,
+  120em: 56.25rem,
+);
+
+// Logo width
+$logo-width: (
+  0: 2.5rem,
+  50em: 2.875rem,
+);
+
+// Navigation columns sizes
+$nav-cols-sizes: (
+  0: 0% 100%,
+  22.5em: 27.5% 72.5%,
+  28.75em: 35% 65%,
+  37.5em: 40% 60%,
+  44.5em: 45% 55%,
+  50em: auto,
+);
+
+// Navigation content gap
+$nav-content-gap: (
+  0: 11vh 0,
+  50em: 2.5rem,
+  64em: 0 3.5rem,
+);
+
+// Home description font sizes
+$home-description-font-sizes: (
+  64em: 5.375rem,
+  105em: 5.75rem,
+  120em: 6.25rem,
+);
+
+// Home description spacing sizes
+$home-description-spacing-sizes: (
+  34.25em: 1rem,
+  45em: 2rem,
+  56.25em: 2.5rem,
+);
+
+// Home description settings on portrait mode
+$home-description-portrait-settings: (
+  0: (
+    'font-size': $fs-xl,
+    'space': 4vh
+  ),
+
+  44.5em: (
+    'font-size': 5.25rem,
+    'space': 4rem
+  ),
+
+  53.75em: (
+    'font-size': 5.75rem,
+    'space': 5rem
+  ),
+);
+
+// Avatar position
+$avatar-position: (
+  44.5em: 0 0 22.5rem 27.5rem,
+  53.75em: 0 0 27.5rem 30.75rem,
+);
+
+// Avatar position by screen height
+$avatar-position-screen-height: (
+  34.25em: 0 0 14.5rem 28.5rem,
+  45em: 0px 0 17.5rem 28.5rem,
+  56.25em: 0px 0 19rem 28.5rem,
+);
+
+// Avatar width
+$avatar-width: (
+  64em: 9rem,
+  105em: 9.25rem,
+  120em: 9.75rem,
+);
+
+// Projects button spacing
+$projects-btn-spacing: (
+  0: 0.875rem 1rem,
+  28.75em: 0.875rem 1.25rem,
+  44.5em: 1rem 1.5rem,
+  53.75em: 1.25rem 1.75rem,
+);
+
+// About section spacing
+$about-section-spacing: (
+  0: 4.5rem,
+  44.5em: 6.25rem,
+  64em: 0,
+);
+
+// About content cols gap
+$about-content-cols-gap: (
+  44.5em: 1.5rem,
+  50em: 2.5rem,
+  120em: 3rem,
+);
+
+// About description spacing
+$about-description-spacing: (
+  0: 1.75rem,
+  28.75em: 1.875rem,
+  50em: 2rem,
+);
+
+// About description spacing on landscape mode
+$about-description-spacing-landscape: (
+  64em: 1.79rem,
+  105em: 1.96rem,
+  120em: 2.12rem,
+);
+
+// About description paragraphs spacing
+$about-description-paragraphs-spacing: (
+  0: 0.5rem,
+  105em: 0.75rem,
+  120em: 1.125rem,
+);
+
+// About background width
+$about-background-width: (
+  0: min(67.5vw, 15.5rem),
+  105em: 16.5rem,
+);
+
+// Go Home Button
+$home-btn-spacing: (
+  0: 0.275rem 0.5rem,
+  44.5em: 0.375rem 0.625rem,
+  64em: 0.5rem 0.625rem,
+);
+
+// Projects section spacing
+$projects-section-spacing: (
+  0: 4.5rem 0,
+  28.75em: 4.5rem 0 9rem 0,
+  44.5em: 6.25rem 0 12.5rem,
+  64em: 0,
+);
+
+// Projects content gap size
+$projects-content-gap-size: (
+  0: 3vh 0,
+  37.5em: 0.125rem 1.875rem,
+  44.5em: 0.425rem 2.375rem,
+  50em: 0.75rem 2.625rem,
+  120em: 1.075rem 3rem,
+);
+
+// Projects element gap size
+$projects-element-gap-size: (
+  0: 0.625rem,
+  37.5em: 0.25rem,
+  44.5em: 0.375rem,
+);
+
+// Footer section spacing
+$footer-section-spacing: (
+  0: 4.5rem,
+  28.75em: 3rem,
+  64em: 0,
+);
+
+// Footer content spacing
+$footer-content-spacing: (
+  64em: 3rem,
+  105em: 3.25rem,
+  120em: 3.75rem,
+);
+
+// Footer navigation gap
+$footer-nav-gap: (
+  0: 1.25rem,
+  24.3em: 1.75rem,
+  44.5em: 2.25rem,
+  53.75em: 2.5rem,
+  105em: 2.75rem,
+  120em: 3rem,
+);
+
+// Footer navigation spacing
+$footer-nav-spacing: (
+  0: 4vh 0 9rem 0,
+  28.75em: 2.5vh 0 5vh 0,
+  64em: 2.5rem 0 5rem 0,
+  105em: 3rem 0 5.5rem 0,
+  120em: 3.25rem 0 6rem 0,
+);
+
+// Footer links width
+$footer-links-width: (
+  0: 38.5vw,
+  28.75em: 30vw,
+  53.75em: 16rem,
+);
+
+// Spacer size
+$spacer-size: (
+  28.75em: 3rem,
+  44.5em: 4rem,
+);

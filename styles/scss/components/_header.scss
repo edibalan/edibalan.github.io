@@ -1,0 +1,170 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+%nav-btn-defaults {
+  border: none;
+  color: $green;
+  font-family: sans-serif;
+  font-size: 2.125rem;
+  transform: rotateZ(90deg);
+}
+
+.header {
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+
+  @include createBreakpoints(min-width, $header-spacing, padding);
+  @include createBreakpoints(min-width, $header-spacing-landscape, padding, landscape);
+  @include createBreakpoints(min-width, $header-width, width, landscape);
+  @include position(0.5s, fixed, 0);
+
+  @media (orientation: portrait) {
+    box-shadow: 0px 0px 20px -15px $blue-500;
+  }
+
+  #logo {
+    background-color: transparent;
+    border: none;
+    margin-right: 0.25rem;
+    outline: none;
+    
+    @include createBreakpoints(min-width, $logo-width, width);
+
+    & img {
+      cursor: pointer;
+    }
+  }
+
+  &, .nav {
+    background-color: $blue-500;
+  }
+
+  .nav {
+    display: grid;
+    gap: 0;
+    width: 100vw;
+    z-index: 1;
+
+    @include createBreakpoints(min-width, $nav-cols-sizes, grid-template-columns);
+    @include position(0.35s, static, 9rem, 100vw);
+
+    // WIDTH >= 360px
+    @media (min-width: 22.5em) {
+      background-color: transparent;
+    }
+
+    // WIDTH <= 799px
+    @media (max-width: 49.9375em) {
+      position: absolute;
+
+      &, &__aside, &__content {
+        height: 100vh;
+      }
+    }
+
+    &__content {
+      background-color: $blue-300;
+      font-size: $fs-sm;
+      flex-direction: column;
+      @include createBreakpoints(min-width, $nav-content-gap, gap);
+      
+      & a:hover {
+        color: $green;
+      }
+
+      #close-nav-btn {
+        @extend %nav-btn-defaults;
+        @include position(0s, absolute, 1.25rem, unset, 1.25rem);
+      }
+      
+      #resume-btn {
+        font-size: 1.0625rem;
+        padding: 0.4rem 1.125rem 0.5rem;
+      
+        &:hover {
+          background-color: $green;
+          color: $blue-500;
+        }
+      }
+    }
+
+    &.show-nav-menu {
+      left: 0;
+    }
+  }
+
+  #open-nav-btn {
+    @extend %nav-btn-defaults;
+  }
+
+  // WIDTH >= 800px
+  @media (min-width: 50em) {
+    display: flex;
+    justify-content: space-between;
+
+    .nav {
+      width: fit-content;
+
+      &__content {
+        background-color: transparent;
+        flex-direction: row;
+  
+        li, #resume-btn {
+          font-size: $fs-xs;
+        }
+  
+        #resume-btn {
+          margin-left: -1.25rem;
+          padding-inline: 0.75rem;
+        }
+      }
+    }
+
+    .nav__aside, .nav #close-nav-btn, #open-nav-btn {
+      display: none;
+    }
+  }
+
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    transition-duration: 0s;
+
+    .logo, .nav {
+      @include position(1.25s, relative);
+    }
+
+    .logo {
+      right: 50vw;
+
+      &.right-position {
+        right: 0;
+      }
+    }
+
+    .nav {
+      left: 60vw;
+
+      &.left-position {
+        left: 0;
+      }
+
+      #resume-btn {
+        margin-left: -1.75rem;
+      }
+    }
+
+    @media (orientation: landscape) {
+      left: 50%;
+      transform: translateX(-50%);
+  
+      .nav__content {
+        column-gap: 2.5rem;
+  
+        #resume-btn {
+          margin-left: -1rem;
+        }
+      }
+    }
+  }
+}

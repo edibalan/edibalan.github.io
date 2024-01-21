@@ -1,0 +1,36 @@
+@use './variables' as *;
+
+@mixin border($bg-color:$white, $size:0.625rem, $br-color:$grey-500, $radius:1rem) {
+  background: $bg-color;
+  border: $size solid $br-color;
+  border-radius: $radius;
+}
+
+@mixin createBreakpoints($type, $map, $prop, $condition: false) {
+  @each $breakpoint, $size in $map {
+    @if $condition == landscape {
+      @media (#{$type}: $breakpoint) and (orientation: landscape) {
+        #{$prop}: $size;
+      }
+    }
+    @else {
+      @media (#{$type}: $breakpoint) {
+        #{$prop}: $size;
+      }
+    }
+  }
+}
+
+@mixin grid-cols($cols) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+}
+
+@mixin position($time:0s, $type:static, $top:unset, $left:unset, $right:unset, $bottom:unset) {
+  transition-duration: $time;
+  position: $type;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}

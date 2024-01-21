@@ -1,0 +1,10 @@
+.animation {
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+
+  & img {
+    margin-inline: auto;
+    width: 6.75rem;
+  }
+}

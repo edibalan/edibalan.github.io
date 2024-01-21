@@ -1,0 +1,116 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.about {
+  @include createBreakpoints(min-width, $about-section-spacing, padding-bottom);
+
+  &__container {
+    @include createBreakpoints(min-width, $section-container-width, width);
+  }
+
+  &__content {
+    align-items: center;
+    flex-direction: column;
+    @include createBreakpoints(min-width, $about-content-cols-gap, column-gap);
+  }
+
+  &__description, &__background {
+    transition-duration: 1.25s;
+  }
+
+  &__description {
+    color: $grey-100;
+    hyphens: auto;
+    letter-spacing: 0.02rem;
+    margin-block: 3vh;
+    width: 100%;
+
+    @include createBreakpoints(min-width, $about-description-spacing, line-height);
+    @include createBreakpoints(min-width, $about-description-spacing-landscape, line-height, landscape);
+
+    & p {
+      @include createBreakpoints(min-width, $about-description-paragraphs-spacing, margin-bottom);
+    }
+  }
+
+  &__background {
+    background-image: url('/assets/about-background.webp');
+    border-radius: 0.75rem;
+    cursor: none;
+    display: block;
+    max-width: 100%;
+    opacity: 0.65;
+    user-select: none;
+    -webkit-user-drag: none;
+
+    @include createBreakpoints(min-width, $about-background-width, width);
+
+    &.animation-on {
+      opacity: 1;
+    }
+  }
+
+  #home-btn {
+    color: $blue-500;
+    line-height: 0.875;
+    transform: rotateZ(90deg);
+    z-index: 3;
+  
+    @include border($green, 0.125rem, $green, 0.375rem);
+    @include createBreakpoints(min-width, $home-btn-spacing, padding);
+    @include position(0s, fixed, unset, unset, 1.25rem, 1.5rem);
+
+    &:hover {
+      background-color: transparent;
+      color: $green;
+    }
+  }
+
+  // WIDTH >= 712px
+  @media (min-width: 44.5em) {
+    &__content {
+      align-items: start;
+      flex-direction: row;
+    }
+
+    &__description {
+      margin-bottom: 0;
+      margin-top: 1.5rem;
+    }
+
+    &__background {
+      margin-top: 2rem;
+    }
+
+    #home-btn {
+      bottom: 2rem;
+      right: 1.75rem;
+    }
+  }
+
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    border: 0.25rem solid $green;
+    flex: none;
+    height: 100vh;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    width: 100vw;
+
+    &__description, &__background {
+      position: relative;
+    }
+    
+    &__description {
+      bottom: 100vh;
+    }
+
+    &__background {
+      top: 100vh;
+    }
+
+    #home-btn {
+      transform: rotateZ(0deg);
+    }
+  }
+}

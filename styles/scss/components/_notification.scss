@@ -1,0 +1,45 @@
+@use '../utilities/variables' as *;
+
+.notification {
+  cursor: pointer;
+  color: $grey-300;
+  display: none;
+  text-decoration: none;
+  transition-duration: 0.22s;
+  transition-timing-function: linear;
+  user-select: none;
+
+  &__arrow, &__content {
+    color: $green;
+  }
+
+  &__arrow {
+    margin-right: -0.275rem;
+    transform: rotateZ(-90deg);
+  }
+
+  &__content {
+    border: 0.125rem solid $green;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    padding: 0.125rem 0.375rem 0.25rem;
+  }
+
+  &.display-flex {
+    display: flex;
+  }
+
+  &.hidden-element {
+    display: none;
+  }
+}
+
+#fullscreen-message {
+  @media (orientation: landscape) {
+    line-height: 1.175rem;
+    position: absolute;
+    right: -10rem;
+    top: 2rem;
+    width: 8.5rem;
+  }
+}

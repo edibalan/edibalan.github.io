@@ -1,0 +1,103 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.projects {
+  @include createBreakpoints(min-width, $projects-section-spacing, padding);
+  
+  &__container {
+    @include createBreakpoints(min-width, $section-container-width, width);
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__content, &__element {
+    flex-direction: column;
+  }
+
+  &__content {
+    margin-top: 4vh;
+    @include createBreakpoints(min-width, $projects-content-gap-size, gap);
+          
+    // WIDTH >= 600px
+    @media (min-width: 37.5em) {
+      @include grid-cols(2);
+    }
+
+    // WIDTH >= 712px
+    @media (min-width: 44.5em) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__element {
+    @include createBreakpoints(min-width, $projects-element-gap-size, row-gap);
+
+    &, &__content, &__banner, &__description {
+      width: 100%;
+    }
+
+    &__content {
+      opacity: 0.65;
+      outline: 0.1rem solid $green;
+      transition-duration: 0.22s;
+      transition-timing-function: linear;
+
+      &.outline {
+        outline: 0.275rem solid $green;
+        opacity: 1;
+      }
+    }
+
+    &__banner {
+      padding: 0.325rem;
+    }
+
+    &__description {
+      justify-content: space-between;
+    }
+
+    &__title {
+      letter-spacing: 0.05rem;
+    }
+
+    & .github-link {
+      font-size: 1.25rem;
+    }
+
+    .marker, &__title:hover, & .github-link:hover {
+      color: $green;
+    }
+  }
+
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    border: 0.25rem solid $green;
+    flex: none;
+    height: 100vh;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    width: 100vw;
+
+    &__element {
+      @include position(1.25s, relative);
+
+      &#project-one, &#project-two {
+        bottom: 100vh;
+      }
+      
+      &#project-three, &#project-four {
+        top: 100vh;
+      }
+      
+      &#project-one, &#project-three {
+        right: 100vw;
+      }
+      
+      &#project-two, &#project-four {
+        left: 100vw;
+      }
+    }
+  }
+}
