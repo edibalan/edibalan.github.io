@@ -1,0 +1,96 @@
+@use '../../utilities/variables' as *;
+@use '../../utilities/mixins' as *;
+@use '../../utilities/maps' as *;
+
+.footer {
+  margin-inline: auto;
+  text-align: center;
+  width: min(100% - 12vw, 46.875rem);
+  @include createBreakpoints(min-width, $footer-section-space, padding-top);
+  @include desktop-mode-rules;
+
+  &, &__header, &__container, &__copyright {
+    @include flex-container(column, center, center);
+  }
+
+  &__container {
+    width: 100%;
+
+    // WIDTH >= 480px & WIDTH <= 1024px
+    @media (min-width: 30em) and (max-width: 63.9375em) {
+      margin-bottom: 8rem;
+    }
+
+    // WIDTH >= 1024px
+    @media (min-width: 64em) {
+      width: 43.75rem;
+    }
+
+    @include createBreakpoints(min-width, $footer-container-space, padding-top);
+    @include createBreakpoints(min-width, $footer-container-width, width);
+
+    .footer__content {
+      @include createBreakpoints(min-width, $footer-content-width, width);
+
+      .footer__header {
+        @include createBreakpoints(min-width, $footer-header-space, margin-bottom);
+
+        .underline {
+          background-color: $green;
+          height: 0.125rem;
+          margin-block: 1rem;
+          width: 4.5rem;
+        }
+      }
+
+      .footer__message {
+        font-weight: $fw-sb;
+      }
+
+      .footer__contact__links {
+        @include createBreakpoints(min-width, $footer-contact-gap, gap);
+        @include createBreakpoints(min-width, $footer-contact-space, margin);
+        @include grid-container(repeat(3, 1fr));
+      }
+
+      .footer__copyright__signature {
+        font-family: $ff-secondary;
+        font-size: $fs-lg;
+        margin: 0.75rem 0 1.375rem;
+        transform: rotateZ(-17.5deg);
+      }
+    }
+
+    // WIDTH >= 480px
+    @media (min-width: 30em) {
+      @include border(0.625rem, $grey-500, 0.5rem, $grey-100);
+
+      .footer__message, .footer__copyright {
+        color: $black;
+      }
+
+      .footer__message {
+        padding-inline: 1.25rem;
+      }
+    }
+
+    // WIDTH >= 1024px & HEIGHT <= 720px & ORIENTATION LANDSCAPE
+    @media (min-width: 64em) and (max-height: 44.9375em) and (orientation: landscape) {
+      padding-top: 1.75rem;
+
+      .footer__content {
+        .footer__header {
+          margin-bottom: 0.875rem;
+  
+          .underline {
+            margin-block: 0.5rem;
+          }
+        }
+  
+        .footer__contact__links {
+          margin: 2.25rem 5rem 2.75rem;
+        }
+      }
+    }
+  }
+}

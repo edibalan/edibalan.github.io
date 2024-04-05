@@ -1,0 +1,124 @@
+@use '../../utilities/variables' as *;
+@use '../../utilities/mixins' as *;
+@use '../../utilities/maps' as *;
+
+.header {
+  z-index: 2;
+  @include createBreakpoints(min-width, $header-spacing, padding);
+  @include hover-effect;
+  @include position(fixed, 0);
+
+  &.blurred {
+    backdrop-filter: blur(0.3rem);
+  }
+
+  &.hidden {
+    top: -10rem;
+  }
+
+  &__content {
+    button, .logo {
+      border: none;
+      cursor: pointer;
+    }
+
+    .logo {
+      background-color: transparent;
+      outline: none;
+      @include createBreakpoints(min-width, $logo-width, width);
+      @include hover-effect;
+    }
+    
+    .language__button {
+      background-color: $grey-300;
+      border-radius: 2rem;
+      width: 2.5rem;
+
+      img {
+        width: 1.25rem;
+        @include hover-effect;
+
+        &.active {
+          transform: translateX(1.25rem);
+        }
+      }
+    }
+
+    .volume__button {
+      color: $grey-300;
+      font-size: 0.875rem;
+      line-height: 0;
+      padding: 0.25rem 0.275rem 0.25rem 0.325rem;
+      transition-duration: 0s;
+      @include border(0.125rem, $grey-300, 50%);
+
+      &:hover {
+        border-color: $green;
+        color: $green;
+      }
+
+      &.active {
+        padding: 0.25rem 0.4125rem 0.25rem 0.35rem;
+      }
+    }
+  }
+
+  // WIDTH <= 1024px
+  @media (max-width: 63.9375em) {
+    background-color: hsla(214, 71%, 12%, 0.8);
+    width: 100%;
+    @include flex-container(initial, center, space-between);
+
+    &__content {
+      @include flex-container(initial, center);
+     
+      .volume__button {
+        margin: 0 1.25rem 0 1rem;
+      }
+    }
+  }
+
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    background-color: $white;
+    height: 100vh;
+    padding: 7vh 0.5rem;
+    width: fit-content;
+    @include flex-container(column-reverse, center, space-between);
+
+    &__content {
+      gap: 1.25rem;
+      @include flex-container(column-reverse, center);
+      
+      .logo:hover {
+        transform: scale(110%);
+      }
+
+      .volume__button {
+        border-color: $grey-400;
+        color: $grey-400;
+        
+        &:hover {
+          transform: scale(125%);
+        }
+      }
+
+      .language__button {
+        margin-block: 1.25rem;
+        transform: rotateZ(90deg);
+        
+        &:hover {
+          transform: scale(120%) rotateZ(90deg);
+        }
+
+        & img {
+          transform: rotateZ(270deg);
+
+          &.active {
+            transform: translateX(1.25rem) rotateZ(270deg);
+          }
+        }
+      }
+    }
+  }
+}

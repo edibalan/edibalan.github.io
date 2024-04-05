@@ -1,0 +1,78 @@
+@use './variables' as *;
+
+@mixin border($size:0.625rem, $br-color:$grey-500, $radius:1rem, $bg-color: transparent) {
+  border: $size solid $br-color;
+  border-radius: $radius;
+  background: $bg-color;
+}
+
+@mixin createBreakpoints($type, $map, $prop) {
+  @each $breakpoint, $value in $map {
+    @if $breakpoint < 64 {
+      @media (#{$type}: ($breakpoint + 'em')) {
+        #{$prop}: $value;
+      }
+    }
+    @else {
+      @media (#{$type}: ($breakpoint + 'em')) and (orientation: landscape) {
+        #{$prop}: $value;
+      }
+    }
+  }
+}
+
+@mixin desktop-mode-rules {
+  @media (min-width: 64em) {
+    flex: none;
+    height: 100vh;
+    padding-left: 4.25rem;
+    scroll-snap-align: start;
+    width: 100vw;
+    @include flex-container(initial, center, center);
+  }
+}
+
+@mixin flex-container($direction: initial, $align: initial, $justify: initial) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid-container($cols) {
+  display: grid;
+  grid-template-columns: $cols;
+}
+
+@mixin hover-effect {
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
+@mixin position($type:static, $top:unset, $right:unset, $bottom:unset, $left:unset) {
+  position: $type;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin scrollbar-rules {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.3rem;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $green;
+    border-radius: 2rem;
+  
+    &:hover {
+      background-color: hsl(146, 100%, 32%);
+    }
+  
+    &:active {
+      background-color: hsl(120, 100%, 25%);
+    }
+  }
+}

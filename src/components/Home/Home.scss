@@ -1,0 +1,125 @@
+@use '../../utilities/variables' as *;
+@use '../../utilities/mixins' as *;
+@use '../../utilities/maps' as *;
+
+.home {
+  height: 100vh;
+  @include desktop-mode-rules;
+  @include flex-container(initial, center, center);
+
+  &__content {
+    @include flex-container(column-reverse, center);
+
+    .home__description {
+      h1 {
+        font-weight: $fw-xb;
+
+        @each $breakpoint, $map in $home-description-rules {
+          $font-size: map-get($map, 'font-size');
+          $space: map-get($map, 'space');
+        
+          @if $breakpoint < 64 {
+            @media (min-width: ($breakpoint + 'em')) {
+              font-size: $font-size;
+              margin-bottom: $space;
+            }
+          }
+           @else {
+            @media (min-width: ($breakpoint + 'em')) and (orientation: landscape) {
+              font-size: $font-size;
+              margin-bottom: $space;
+            }
+          }
+        }
+
+        &.en-description {
+          @include createBreakpoints(min-width, $en-description-letters-spacing, letter-spacing);
+        }
+
+        &.ro-description {
+          @include createBreakpoints(min-width, $ro-description-letters-spacing, letter-spacing);
+        }
+      }
+      
+      a {
+        display: block;
+        margin-inline: auto;
+        width: fit-content;
+
+        .projects__button {
+          font-weight: $fw-bd;
+          @include createBreakpoints(min-width, $projects-btn-spacing, padding);
+  
+          &:hover {
+            background-color: $green;
+            color: $blue-500;
+          }
+        }
+
+        // WIDTH >= 1024px
+        @media (min-width: 64em) {
+          margin-inline: unset;
+          margin-right: auto;
+
+          // & ORIENTATION: LANDSCAPE
+          @media (orientation: landscape) {
+            .projects__button {
+              padding: 1.25rem 1.375rem 1.125rem;
+            }
+          }
+        }
+      }
+    }
+
+    .home__avatar {
+      outline: 0.125rem solid $green;
+      padding: 0.25rem;
+      width: min(42vw, 9.75rem);
+      @include createBreakpoints(min-width, $avatar-position, margin);
+      @include createBreakpoints(min-width, $avatar-width, width);
+      
+      &, img {
+        border-radius: 50%;
+      }
+
+      // HEIGHT <= 520px | WIDTH >= 540px & HEIGHT <= 760px & ORIENTATION PORTRAIT
+      @media (max-height: 32.5em)
+        or ((min-width: 33.75em) and (max-height: 47.5em) and (orientation: portrait)) {
+          display: none;
+      }
+
+      // WIDTH >= 712px
+      @media (min-width: 44.5em) {
+        position: absolute;
+      }
+    }
+  }
+
+  // WIDTH <= 1024px
+  @media (max-width: 63.9375em) {
+    &, &__content {
+      width: 100%;
+    }
+  }
+
+  // WIDTH >= 1024px & HEIGHT <= 720px & ORIENTATION LANDSCAPE
+  @media (min-width: 64em) and (max-height: 44.9375em) and (orientation: landscape) {
+    .home__description {
+      h1 {
+        margin-bottom: 2.75rem;
+
+        &:nth-of-type(3) {
+          margin: 0;
+        }
+      }
+
+      .projects__button {
+        display: none;
+      }
+    }
+    
+    .home__avatar {
+      margin: 0 0 17.25rem 33.5rem;
+    }
+  }
+}

@@ -1,0 +1,237 @@
+@use '../utilities/variables' as *;
+
+// Header spacing
+$header-spacing: (
+     0: 1rem,
+  24.3: 1.375rem,
+  44.5: 1.625rem,
+    50: 2.25rem,
+);
+
+// Logo width
+$logo-width: (
+     0: 2.5rem,
+  22.5: 3rem,
+  44.5: 3.25rem
+);
+
+// Modal columns sizes
+$modal-cols-sizes: (
+      0: 0 100%,
+   22.5: 27.5% 72.5%,
+  33.75: 37.5% 62.5%,
+   44.5: 42.5% 57.5%
+);
+
+// Navigation links scales
+$nav-links-scales: (
+  2: 120%,
+  3: 115%,
+  4: 130%
+);
+
+
+// Home description rules
+$home-description-rules: (
+     0: ( 'font-size': $fs-xl,     'space': 4.25vh ),
+  44.5: ( 'font-size': 5.25rem,    'space': 4rem ),
+    50: ( 'font-size': 5.5rem,     'space': 4.5rem ),
+    54: ( 'font-size': 5.75rem,    'space': 4.75rem ),
+    64: ( 'font-size': 6rem,       'space': 2.05rem ),
+   105: ( 'font-size': 6.75rem,    'space': 2.3rem ),
+   120: ( 'font-size': 7rem,  'space': 2.6rem )
+);
+
+// Home description in english letters spacing
+$en-description-letters-spacing: (
+    0: -0.0809rem,
+   54: -0.1229rem,
+   64: -0.0237rem,
+  105: 0.0334rem,
+  120: 0.1326rem
+);
+
+// Home description in romanian letters spacing
+$ro-description-letters-spacing: (
+     0: -0.875vw,
+  44.5: -0.675vw,
+    54: -0.4078rem,
+    64: -0.33499rem,
+   105: -0.32478rem,
+   120: -0.3637rem
+);
+
+// Avatar position
+$avatar-position: (
+     0: 0 0 1vh 0,
+  22.5: 0 0 3vh 0,
+  44.5: 0 0 25rem 27rem,
+    50: 0 0 27.5rem 29rem,
+    54: 0 0 29.25rem 30.75rem,
+    64: 0 0 21.75rem 33.5rem,
+   105: 0 0 25.25rem 39.5rem,
+   120: 0 0 26.5rem 42rem
+);
+
+// Avatar width
+$avatar-width: (
+  105: 9.75rem,
+  120: 10.25rem
+);
+
+// Projects button spacing
+$projects-btn-spacing: (
+     0: 1rem 0.875rem 0.875rem,
+  22.5: 1.125rem 1rem 1rem,
+  44.5: 1.25rem 1.375rem 1.125rem,
+    50: 1.375rem 1.5rem 1.25rem
+);
+
+
+// About section space
+$about-section-space: (
+   0: 4.375rem,
+  30: 6.25rem
+);
+
+// About content gap
+$about-content-gap: (
+  44.5: 1.5rem,
+    48: 2rem,
+    52: 2.875rem,
+   120: 3rem
+);
+
+// About content height
+$about-content-height: (
+   64: 29.5rem,
+  105: 33rem,
+  120: 34.75rem
+);
+
+// About content width
+$about-content-width: (
+  105: 50rem,
+  120: 53.125rem
+);
+
+// About description height
+$about-description-height: (
+   64: 28rem,
+  105: 31.5rem,
+  120: 33.25rem
+);
+
+// About description space
+$about-description-space: (
+     0: 3vh,
+  44.5: 1.5rem
+);
+
+// About animation space
+$about-animation-space: (
+     0: 3vh,
+  44.5: 2rem
+);
+
+
+// Projects section spacing
+$projects-section-spacing: (
+   0: 4.375rem 0 2.5rem,
+  30: 6.25rem 0 11rem,
+);
+
+// Projects content gap
+$projects-content-gap: (
+     0: 3vh 0,
+  37.5: 0.125rem 1.875rem,
+  44.5: 0.875rem 2.625rem
+);
+
+// Projects content spacing
+$projects-content-spacing: (
+     0: 4vh,
+  37.5: 1.375rem
+);
+
+// Projects content width
+$projects-content-width: (
+  105: 50rem,
+  120: 53.125rem
+);
+
+
+// Footer section space
+$footer-section-space: (
+   0: 4.25rem,
+  30: 0
+);
+
+// Footer container space
+$footer-container-space: (
+   30: 2.25rem,
+  105: 2.75rem,
+  120: 3.25rem
+);
+
+// Footer container width
+$footer-container-width: (
+  105: 50rem,
+  120: 53.125rem
+);
+
+// Footer content width
+$footer-content-width: (
+   37.5: 74vw,
+   44.5: 64vw,
+   50.5: 60vw,
+  53.75: 32rem,
+    105: 34rem
+);
+
+// Footer header space
+$footer-header-space: (
+    0: 1.5rem,
+  105: 2rem,
+  120: 2.5rem
+);
+
+// Footer contact gap
+$footer-contact-gap: (
+      0: 2.5vw,
+  53.75: 1.5rem
+);
+
+// Footer contact space
+$footer-contact-space: (
+      0: 3rem 6vw 8rem,
+   24.3: 3rem 8vw 8rem,
+     28: 3rem 9vw 8rem,
+     30: 3rem 9vw 6rem,
+  33.75: 3rem 11vw 6rem,
+   37.5: 3rem 9vw 6rem,
+   44.5: 3rem 6vw 6rem,
+     48: 3rem 7.5vw 6rem,
+     64: 3rem 5rem 4.25rem,
+    105: 3.5rem 4.5rem 5rem,
+    120: 3.75rem 4.5rem 5.5rem
+);
+
+// Footer card space
+$footer-card-space: (
+    0: 1.875vh,
+   64: 1rem,
+  105: 1.5rem
+);
+
+// Footer card icon font size
+$footer-card-icon-font-size: (
+      0: 2rem,
+  25.75: 2.25rem
+);
+
+// Footer card label font size
+$footer-card-label-font-size: (
+      0: 0.9375rem,
+  25.75: 1rem
+);

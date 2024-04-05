@@ -1,0 +1,72 @@
+@use '../../../utilities/variables' as *;
+@use '../../../utilities/mixins' as *;
+
+.projects .card {
+  gap: 0.75rem;
+  @include flex-container(column, center);
+
+  // WIDTH >= 1024px & ORIENTATION LANDSCAPE
+  @media (min-width: 64em) and (orientation: landscape) {
+    gap: 0.5rem;
+  }
+
+  &, &__content, &__banner, &__description {
+    width: 100%;
+  }
+
+  &__content {
+    cursor: none;
+    opacity: 0.65;
+    outline: 0.1rem solid $green;
+    @include hover-effect;
+
+    &.selected {
+      opacity: 1;
+      outline: 0.25rem solid $green;
+    }
+
+    .card__banner {
+      padding: 0.325rem;
+    }
+  }
+
+  &__description {
+    line-height: 0;
+    visibility: hidden;
+    @include flex-container(row, center, space-between);
+
+    .card__title:hover, .github-link:hover, .marker {
+      color: $green;
+    }
+
+    .card__title {
+      letter-spacing: 0.05rem;
+      @include hover-effect;
+    }
+
+    .github-link {
+      font-size: 1.25rem;
+    }
+
+    &.selected {
+      visibility: visible;
+    }
+  }
+
+  &#projects-card-4 {
+    .card__content {
+      cursor: not-allowed;
+
+      &.selected {
+        opacity: 0.65;
+        outline: 0.1rem solid $green;
+      }
+    }
+
+    .card__description {
+      &.selected {
+        visibility: hidden;
+      }
+    }
+  }
+}

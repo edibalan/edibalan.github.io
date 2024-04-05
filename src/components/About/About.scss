@@ -1,0 +1,132 @@
+@use '../../utilities/variables' as *;
+@use '../../utilities/mixins' as *;
+@use '../../utilities/maps' as *;
+
+.about {
+  @include createBreakpoints(min-width, $about-section-space, padding-bottom);
+  @include desktop-mode-rules;
+
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    padding-bottom: 0;
+
+    &__content {
+      width: 43.75rem;
+    }
+  }
+  
+  &__content {
+    @include createBreakpoints(min-width, $about-content-gap, column-gap);
+    @include createBreakpoints(min-width, $about-content-height, height);
+    @include createBreakpoints(min-width, $about-content-width, width);
+
+    .about__description {
+      color: $grey-100;
+      hyphens: auto;
+      letter-spacing: 0.03rem;
+      line-height: 2rem;
+      width: 100%;
+      @include createBreakpoints(min-width, $about-description-height, height);
+      @include createBreakpoints(min-width, $about-description-space, margin-top);
+
+      p:not(:nth-of-type(4)) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .about__animation {
+      background-image: url('../../assets/images/about-picture.webp');
+      border-radius: 0.75rem;
+      cursor: none;
+      display: block;
+      max-width: 100%;
+      opacity: 0.65;
+      user-select: none;
+      width: min(67.5vw, 15.5rem);
+      -webkit-user-drag: none;
+      @include createBreakpoints(min-width, $about-animation-space, margin-top);
+      @include hover-effect;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .home__button {
+    color: $blue-500;
+    font-size: 1.0625rem;
+    line-height: 1.2;
+    padding: 0.375rem 0.375rem 0.25rem;
+    z-index: 3;
+    @include border(0.125rem, $green, 0.5rem, $green);
+    
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
+  // WIDTH <= 712px
+  @media (max-width: 44.4375em) {
+    &__content {
+      @include flex-container(column, center);
+    }
+
+    .home__button {
+      @include position(fixed, unset, 1.25rem, 1.75rem);
+    }
+  }
+  
+  // WIDTH >= 712px
+  @media (min-width: 44.5em) {
+    &__content {
+      @include flex-container(row, flex-start);
+    }
+
+    .home__button {
+      @include position(fixed, unset, 1.75rem, 2.25rem);
+    }
+  }
+
+  // WIDTH >= 1024px & ORIENTATION LANDSCAPE
+  @media (min-width: 64em) and (orientation: landscape) {
+    .about__title {
+      padding-left: 1.125rem;
+    }
+
+    &__content {
+      overflow: hidden;
+
+      .about__description {
+        direction: rtl;
+        text-align: left;
+        overflow-y: scroll;
+        padding-left: 1rem;
+        @include scrollbar-rules;
+      }
+    }
+  }
+
+  // WIDTH >= 1024px & HEIGHT <= 720px & ORIENTATION LANDSCAPE
+  @media (min-width: 64em) and (max-height: 44.9375em) and (orientation: landscape) {
+    .about__title {
+      display: none;
+    }
+
+    &__content {
+      width: 43.75rem;
+
+      &, .about__description {
+        height: 27.25rem;
+      }
+
+      .about__animation {
+        margin-top: 1vh;
+      }
+
+      .about__description {
+        margin-top: 0;
+      }
+    }
+  }
+}

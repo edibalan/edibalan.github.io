@@ -1,0 +1,65 @@
+@use '../../../utilities/variables' as *;
+@use '../../../utilities/mixins' as *;
+@use '../../../utilities/maps' as *;
+
+.navigation {
+  @include flex-container(row, center);
+
+  &__content {
+    column-gap: 1.25rem;
+
+    a:hover {
+      color: $green;
+    }
+
+    .resume__button {
+      font-weight: $fw-bd;
+    }
+
+    // WIDTH <= 1024px
+    @media (max-width: 63.9375em) {
+      @include flex-container(row, center);
+
+      .resume__button {
+        color: $green;
+        padding: 0.625rem 0.625rem 0.5rem;
+        @include border(0.125rem, $green, 0.25rem);
+
+        &:hover {
+          background-color: $green;
+          color: $blue-500;
+        }
+      }
+    }
+
+    // WIDTH >= 1024px
+    @media (min-width: 64em) {
+      row-gap: 2.25rem;
+      @include flex-container(column, center);
+
+      li, a {
+        color: $grey-400;
+        font-size: 1.25rem;
+        line-height: 0;
+
+        &:hover {
+          transform: scale(120%);
+        }
+      }
+
+      @each $index, $value in $nav-links-scales {
+        li:nth-of-type(#{$index}), a:nth-of-type(#{$index}) {
+          transform: scale($value);
+          
+          &:hover {
+            transform: scale($value + 15%);
+          }
+        }
+      }
+
+      .resume__button {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}

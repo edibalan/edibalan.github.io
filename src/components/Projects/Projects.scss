@@ -1,0 +1,45 @@
+@use '../../utilities/variables' as *;
+@use '../../utilities/mixins' as *;
+@use '../../utilities/maps' as *;
+
+.projects {
+  display: flex;
+  text-align: center;
+  @include createBreakpoints(min-width, $projects-section-spacing, padding);
+  @include desktop-mode-rules;
+
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    padding-block: 0;
+
+    &__container .projects__content {
+      width: 43.75rem;
+    }
+  }
+
+  &__container {
+    .projects__content {
+      @include createBreakpoints(min-width, $projects-content-gap, gap);
+      @include createBreakpoints(min-width, $projects-content-spacing, margin-top);
+      @include createBreakpoints(min-width, $projects-content-width, width);
+      @include flex-container(column);
+  
+      // WIDTH >= 600px
+      @media (min-width: 37.5em) {
+        @include grid-container(repeat(2, 1fr));
+      }
+    }
+
+    // WIDTH >= 1024px & HEIGHT <= 720px & ORIENTATION LANDSCAPE
+    @media (min-width: 64em) and (max-height: 44.9375em) and (orientation: landscape) {
+      .projects__title {
+        visibility: hidden;
+      }
+
+      .projects__content {
+        gap: 0.5rem 2rem;
+        margin-top: 0.75rem;
+      }
+    }
+  }
+}

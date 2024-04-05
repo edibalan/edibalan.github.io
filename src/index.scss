@@ -1,0 +1,188 @@
+@use './utilities/variables' as *;
+@use './utilities/mixins' as *;
+
+:root {
+  @include scrollbar-rules;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &, &::before, &::after {
+    box-sizing: inherit;
+  }
+
+  & ::selection {
+    background-color: $green;
+    color: $blue-500;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+
+  &:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+body, button, a {
+  font-family: $ff-primary;
+  color: $grey-300;
+}
+
+body, .main {
+  @include flex-container(column);
+}
+
+body {
+  background-color: $blue-500;
+  line-height: 1.25;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+}
+
+ul {
+  list-style: none;
+}
+
+button, h2, h3:hover {
+  color: $green;
+}
+
+h2, h3, a, button {
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  font-weight: $fw-bd;
+  letter-spacing: 0.1rem;
+  line-height: 0.8;
+}
+
+h2 {
+  font-size: $fs-lg;
+}
+
+h3 {
+  font-size: $fs-md;
+}
+
+p {
+  font-size: $fs-sm;
+  font-weight: $fw-lt;
+}
+
+button, li, a {
+  background: transparent;
+  cursor: pointer;
+  font-size: $fs-xs;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
+button {
+  outline: none;
+  @include border(0.125rem, $green, 0.375rem);
+}
+
+img, picture, svg, button, a {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.main {
+  margin-inline: auto;
+  width: min(100% - 12vw, 46.875rem);
+}
+
+// WIDTH >= 1024px
+@media (min-width: 64em) {
+  :root::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .app-container {
+    display: flex;
+  }
+
+  #root, .main {
+    @include flex-container(row, flex-start, flex-start);
+  }
+
+  .main {
+    width: auto;
+  }
+}
+
+
+// UTILITY CLASSES
+.green {
+  color: $green;
+}
+
+.light-mode {
+  background-color: hsl(205, 55%, 96%);
+
+  &, .header {
+    box-shadow: 2px 2px 10px;
+  }
+
+  .header {
+    background-color: hsla(205, 55%, 96%, 0.8);
+  }
+
+  a, p, h1, h3, .projects__button {
+    color: $grey-600;
+  }
+  
+  .volume__button {
+    border-color: $grey-500;
+    color: $grey-500;
+  }
+
+  .about__description p {
+    font-weight: $fw-sb;
+  }
+
+  .footer .card {
+    box-shadow: 2px 2px 4px $grey-300;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  
+  // WIDTH >= 1024px
+  @media (min-width: 64em) {
+    .header {
+      background-color: $blue-500;
+
+      li a, .resume__button, .volume__button {
+        color: hsl(202, 52%, 96%);
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}

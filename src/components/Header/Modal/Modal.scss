@@ -1,0 +1,80 @@
+@use '../../../utilities/variables' as *;
+@use '../../../utilities/mixins' as *;
+@use '../../../utilities/maps' as *;
+
+%modal-btn-rules {
+  border: none;
+  color: $green;
+  font-family: sans-serif;
+  font-size: 2.125rem;
+  font-weight: $fw-lt;
+  transform: rotateZ(90deg);
+}
+
+.modal {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  @include createBreakpoints(min-width, $modal-cols-sizes, grid-template-columns);
+  @include position(fixed, 0, unset, unset, 0);
+  @include hover-effect;
+
+  // WIDTH >= 360px
+  @media (min-width: 22.5em) {
+    background-color: transparent;
+  }
+
+  &.hidden {
+    left: 100vw;
+  }
+
+  &__backdrop {
+    @include hover-effect;
+
+    &.blurred {
+      backdrop-filter: blur(0.3rem);
+    }
+  }
+
+  &__content {
+    background-color: $blue-300;
+    font-size: $fs-sm;
+    row-gap: 9vh;
+    @include flex-container(column, center, center);
+
+    &.light-mode {
+      background-color: $white;
+    }
+
+    .close__modal__button {
+      @extend %modal-btn-rules;
+      @include position(absolute, 1.25rem, 1.25rem);
+    }
+
+    .modal__link a, .resume__button {
+      font-size: 1.0625rem;
+    }
+
+    .modal__link a:hover {
+      color: $green;
+    }
+ 
+    .resume__button {
+      color: $green;
+      font-weight: $fw-bd;
+      padding: 0.75rem 0.75rem 0.625rem;
+      @include border(0.125rem, $green, 0.25rem);
+    
+      &:hover {
+        background-color: $green;
+        color: $blue-500;
+      }
+    }
+  }
+}
+
+.open__modal__button {
+  margin-top: -0.05rem;
+  @extend %modal-btn-rules;
+}
