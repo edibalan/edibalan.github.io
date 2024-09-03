@@ -51,7 +51,7 @@ const Modal = props => {
           <a
             aria-label='Resume Button'
             className='resume__button'
-            href='https://drive.google.com/file/d/1U9a3BLL2u8Pv6dNUCkGwNjaDrESEqJBO/view?usp=drive_link'
+            href='https://drive.google.com/file/d/1GR0wzz_TNV1T1V4EC5d1EvkD9R5iZ2FS/view?usp=sharing'
             onClick={ handleModal }
             target='_blank'
           >
