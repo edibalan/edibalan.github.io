@@ -70,11 +70,11 @@ const data = [
 
     about: {
       descriptions: [
-        'My name is Bălan Eduard I am 26 years old and I consider myself a person who has a great passion when it comes to development of websites, platforms and apps for the vast world of the Internet',
+        'My name is Bălan Eduard I am 27 years old and I consider myself a person who has a great passion when it comes to development of websites, platforms and apps for the vast world of web',
     
-        `My experience in web development has been gained by studying and applying of knowledge from web development learning platforms such as Stack${h}Over${h}flow, W3${h}Schools, Mo${h}zilla De${h}vel${h}op${h}ers, free${h}Code${h}Camp and others, but also from courses and train${h}ings watched on Youtube and other platforms. I also developed some pro${h}jects which helped me improve my skills`,
+        `My experience in web development has been gained by studying and applying of knowledge from web development learning platforms such as Stack${h}Over${h}flow, W3${h}Schools, Mo${h}zilla De${h}vel${h}op${h}ers, free${h}Code${h}Camp, but also from various courses and train${h}ings in the field. I also developed pro${h}jects which helped me improve my skills`,
       
-        `As a person, I consider myself perseverant, flexible, receptive, always willing to learn new things and give my best in ev${h}ery project in which I am in${h}volved`,
+        `As a person, I consider myself perseverant, flexible, receptive, always willing to learn new things and give my best in ev${h}ery project I am in${h}volved`,
       
         'Here is a list of technologies that I used: '
       ],
@@ -116,9 +116,9 @@ const data = [
 
     about: {
       descriptions: [
-        `Numele meu este Bălan Eduard, am 26 de ani si ma consider o persoana ce are o ma${h}re pasiune cand vine vor${h}ba de dez${h}vol${h}ta${h}rea de site-uri, platforme si a${h}pli${h}ca${h}tii pen${h}tru lu${h}mea vasta a web-ului`,
+        `Numele meu este Bălan Eduard, am 27 de ani si ma consider o persoana ce are o ma${h}re pasiune cand vine vor${h}ba de dez${h}vol${h}ta${h}rea de site-uri, platforme si a${h}pli${h}ca${h}tii pen${h}tru lu${h}mea vasta a web-ului`,
     
-        `Experienta mea in dezvoltarea web a fost acumulata prin stu${h}di${h}e${h}rea si a${h}pli${h}ca${h}rea cu${h}nos${h}tin${h}te${h}lor de pe plat${h}for${h}me spe${h}ci${h}a${h}li${h}za${h}te in dez${h}vol${h}ta${h}re web pre${h}cum Stack${h}Over${h}flow, W3${h}Schools, Mo${h}zilla De${h}ve${h}lo${h}pers, free${h}Code${h}Camp s.a, dar si din cur${h}su${h}ri si trai${h}ning-uri ur${h}ma${h}ri${h}te pe You${h}tube si al${h}te plat${h}for${h}me. De a${h}se${h}me${h}nea, am dez${h}vol${h}tat ca${h}te${h}va pro${h}iec${h}te ce m-au a${h}ju${h}tat sa-mi im${h}bu${h}na${h}ta${h}te${h}sc a${h}bi${h}li${h}ta${h}ti${h}le`,
+        `Experienta mea in programare web a fost acumulata prin stu${h}di${h}e${h}rea si a${h}pli${h}ca${h}rea cu${h}nos${h}tin${h}te${h}lor a${h}cu${h}mu${h}la${h}te de pe plat${h}for${h}me spe${h}ci${h}a${h}li${h}za${h}te in pro${h}gra${h}ma${h}re web pre${h}cum Stack${h}Over${h}flow, W3${h}Schools, Mo${h}zilla De${h}ve${h}lo${h}pers, free${h}Code${h}Camp, dar si din di${h}ver${h}se cur${h}su${h}ri si trai${h}ning-uri in do${h}me${h}niu. De a${h}se${h}me${h}nea, am dez${h}vol${h}tat pro${h}iec${h}te ce m-au a${h}ju${h}tat sa-mi im${h}bu${h}na${h}ta${h}te${h}sc a${h}bi${h}li${h}ta${h}ti${h}le`,
       
         `Ca persoana, ma consider per${h}se${h}ve${h}re${h}nt, fle${h}xi${h}bil, receptiv, me${h}reu dor${h}nic sa in${h}vat lu${h}cru${h}ri noi si sa o${h}fer tot ce am mai bun in fi${h}e${h}ca${h}re pro${h}iect in ca${h}re sunt im${h}pli${h}cat`,
       
