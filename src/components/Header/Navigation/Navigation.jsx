@@ -57,7 +57,7 @@ const Navigation = props => {
         <a
           aria-label='Resume Button'
           className='resume__button'
-          href='https://drive.google.com/file/d/1GR0wzz_TNV1T1V4EC5d1EvkD9R5iZ2FS/view?usp=sharing'
+          href='https://drive.google.com/file/d/1aae4U868KF5tcv7c2qXxK-CMv6OM-WMs/view'
           target='_blank'
           title={
             window.innerWidth > window.innerHeight
