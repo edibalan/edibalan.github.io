@@ -33,7 +33,7 @@ const Modal = props => {
             navigation.link.map(( link, index ) => (
               <li
                 key={ 'modal-link-' + ( index + 1 ) }
-                aria-label='Modal Link'
+                aria-label='modal link'
                 className='modal__link'
                 onClick={ handleModal }
               >
@@ -49,7 +49,7 @@ const Modal = props => {
           }
 
           <a
-            aria-label='Resume Button'
+            aria-label='resume button'
             className='resume__button'
             href='https://drive.google.com/file/d/1aae4U868KF5tcv7c2qXxK-CMv6OM-WMs/view'
             onClick={ handleModal }

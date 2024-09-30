@@ -21,7 +21,7 @@ const Navigation = props => {
           navigation.link.map(( link, index ) => (
             <li
               key={ 'nav-link-' + ( index + 1 ) }
-              aria-label='Navigation Link'
+              aria-label='navigation link'
               className='navigation__link'
               title={
                 window.innerWidth > window.innerHeight
@@ -55,7 +55,7 @@ const Navigation = props => {
         }
 
         <a
-          aria-label='Resume Button'
+          aria-label='resume button'
           className='resume__button'
           href='https://drive.google.com/file/d/1aae4U868KF5tcv7c2qXxK-CMv6OM-WMs/view'
           target='_blank'
