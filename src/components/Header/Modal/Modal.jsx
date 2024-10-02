@@ -22,6 +22,7 @@ const Modal = props => {
         <div className={ 'modal__backdrop' + props.backdrop } />
         <ul className={ 'modal__content' + props.theme }>
           <button
+            aria-label='Close Modal Button'
             className='close__modal__button'
             onClick={ handleModal }
             type='button'
@@ -32,9 +33,9 @@ const Modal = props => {
           {
             navigation.link.map(( link, index ) => (
               <li
-                key={ 'modal-link-' + ( index + 1 ) }
-                aria-label='modal link'
+                aria-label='Modal Link'
                 className='modal__link'
+                key={ 'modal-link-' + ( index + 1 ) }
                 onClick={ handleModal }
               >
                 <a
@@ -49,7 +50,7 @@ const Modal = props => {
           }
 
           <a
-            aria-label='resume button'
+            aria-label='Resume Button'
             className='resume__button'
             href='https://drive.google.com/file/d/1aae4U868KF5tcv7c2qXxK-CMv6OM-WMs/view'
             onClick={ handleModal }

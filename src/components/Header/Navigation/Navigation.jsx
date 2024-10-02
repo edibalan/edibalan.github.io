@@ -20,16 +20,15 @@ const Navigation = props => {
         {
           navigation.link.map(( link, index ) => (
             <li
-              key={ 'nav-link-' + ( index + 1 ) }
-              aria-label='navigation link'
+              aria-label='Navigation Link'
               className='navigation__link'
+              key={ 'nav-link-' + ( index + 1 ) }
+              onClick={ clickSound }
               title={
                 window.innerWidth > window.innerHeight
                   ? header.navigation__label[index]
                   : ''
               }
-
-              onClick={ clickSound }
             >
               {
                 window.innerWidth < 1024
@@ -55,7 +54,7 @@ const Navigation = props => {
         }
 
         <a
-          aria-label='resume button'
+          aria-label='Resume Button'
           className='resume__button'
           href='https://drive.google.com/file/d/1aae4U868KF5tcv7c2qXxK-CMv6OM-WMs/view'
           target='_blank'
